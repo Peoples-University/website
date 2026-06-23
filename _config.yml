@@ -1,0 +1,13 @@
+title: Workers Make Possible
+description: Advancing workers' rights in Singapore
+baseurl: ""
+url: "https://workersmakepossible.com"
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
