@@ -24,6 +24,11 @@ The state naturally arises as a structure which reinenforces this social relatio
 
 From Critique of Hegel’s philosophy of the right: bureaucracy as particular interest masquerading as universal. The separation of the state (or “the leadership”) from the masses. The expansion of state bureaucracy with the emergence of the so-called “welfare state” in the early to mid 20th century; the transformation of some public (or state) bureaus of the welfare state into private (or corporate) bureaus of the non-profit system in late 20th century.
 
+<figure>
+  <img src="{{ site.baseurl }}/assets/Article.png" alt="hallooo" class="post-image">
+  <figcaption>Your caption text goes here</figcaption>
+</figure>
+
 One of the early social theorists of bureaucracy was Max Weber, who saw bureaucracy as the characteristic form of rational administration in modern society. Weber saw bureaucracy as the administrative form most suited to modern rational-legal authority. Unlike traditional or charismatic rule, bureaucracy operates through offices, written rules, hierarchy, technical training, and impersonal procedure. 
 
 - Point 1
