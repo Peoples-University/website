@@ -1,0 +1,66 @@
+backend:
+  name: github
+  repo: Peoples-University/website
+  branch: main
+  base_url: https://your-oauth-proxy-url.com   # from the OAuth proxy step
+
+media_folder: "assets/images"   # where uploaded images get saved
+public_folder: "/assets/images" # how that path is referenced in the built site
+
+collections:
+  - name: "journal-articles"
+    label: "Journal Articles"
+    folder: "_articles"        # adjust to match your actual collection folder
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string", default: "People's University Committee"}
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "projects"
+    label: "Projects"
+    folder: "_projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string", default: "People's University"}
+      - { label: "Live Demo URL", name: "demo_url", widget: "string", required: false }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "studies"
+    label: "Studies"
+    folder: "_studies"        # adjust to match your actual collection folder
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string", default: "People's University Committee"}
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "events"
+    label: "Past Events"
+    folder: "_events"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Calendar Link", name: "calendarlink", widget: "string", required: false, hint: "Google Calendar link or .ics file URL" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }

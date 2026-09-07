@@ -16,6 +16,11 @@ The capitalist production process is characterized around private ownership of t
 
 The state naturally arises as a structure which reinenforces this social relation. To do this it  organizes law, courts, police, armies. All of this requires a layer of administration which enforce a set of social rules. Bureaucracy then is the social form of organization which is produced by the separation of civil society and production, which administers rules from above.
 
+<figure>
+  <img src="{{ site.baseurl }}/assets/Article.png" alt="hallooo" class="post-image">
+  <figcaption>Your caption text goes here</figcaption>
+</figure>
+
 ## Heading 2
 
 From Critique of Hegel’s philosophy of the right: bureaucracy as particular interest masquerading as universal. The separation of the state (or “the leadership”) from the masses. The expansion of state bureaucracy with the emergence of the so-called “welfare state” in the early to mid 20th century; the transformation of some public (or state) bureaus of the welfare state into private (or corporate) bureaus of the non-profit system in late 20th century.
