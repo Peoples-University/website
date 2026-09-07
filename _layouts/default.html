@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>{{ page.title }} | The People's University Project</title>
+</head>
+
+<body>
+
+    <!-- =========== NAV ===========-->
+    <div class="container-fluid pt-3 pb-3 fixed-top" style="background-color:#9090f3;">
+        <div class="text-center">
+            <div class="h1" style="color:black;">The People's University Project</div>
+            <div class="h4 mt-2">
+                <a href="/index" class="btn btn-primary ml-1" role="button"><i class="bi bi-house-heart-fill"></i></a>
+                <a href="/about" class="btn btn-primary ml-1" role="button">ABOUT</a>
+                <a href="/journal" class="btn btn-primary ml-1" role="button">JOURNAL</a>
+                <a href="/projects" class="btn btn-primary ml-1" role="button">PROJECTS</a>
+                <a href="/studies" class="btn btn-primary ml-1" role="button">STUDIES</a>
+            </div>
+        </div>
+    </div>
+
+    {% if page.collection %}
+<div class="container mt-4">
+    <a href="{% case page.collection %}
+                {% when 'articles' %}/journal
+                {% when 'projects' %}/projects
+                {% when 'studies' %}/studies
+                {% when 'past_events' %}/events
+             {% endcase %}"
+       class="btn btn-primary">
+        Back to
+        {% case page.collection %}
+            {% when 'articles' %}Journal
+            {% when 'projects' %}Projects
+            {% when 'studies' %}Studies
+            {% when 'past_events' %}Events
+        {% endcase %}
+    </a>
+</div>
+{% endif %}
+
+
+    <div class="container mt-3">
+        <div class="h1 pb-2">{{ page.title }}</div>
+            <p style="font-weight:bold">
+                Published {{ page.date | date: "%d %B %Y" }}
+                {% if page.author %} · By {{ page.author }}{% endif %}
+            </p>
+        </div>
+    
+    <!-- =========== PAGE CONTENT =========== -->
+     <div class="container mt-3">
+        {{ content }}
+    </div>
+
+<script>
+function adjustNavPadding() {
+    const nav = document.querySelector('.fixed-top');
+    const navHeight = nav.offsetHeight;
+    document.body.style.paddingTop = navHeight + 'px';
+}
+window.addEventListener('load', adjustNavPadding);
+window.addEventListener('resize', adjustNavPadding);
+</script>
+
+</body>
+</html>

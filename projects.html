@@ -1,0 +1,48 @@
+---
+layout: blog
+title: Projects
+permalink: /projects/
+---
+
+<div class="container">
+    <div class="h1 mt-4 mb-4 text-center">Projects</div>
+
+    {% assign all_projects = site.projects | sort: "date" | reverse %}
+
+    <div class="row mb-5">
+        {% for project in all_projects %}
+        <div class="col-12 col-md-6 mb-4">
+
+            <div class="mt-0" style="background-color: #FDD24F; border-radius:5px">
+
+                <div class="ml-3 mb-3"><span style="width:fit-content; background-color: #2b569b; padding:10px; border-radius: 5px 5px 5px 5px; color: white;">PROJECT</span></div>
+
+                <!--CARD Title-->
+                <div class="h2 pl-4 pr-4 pb-3"><a href="{{ project.url }}" style="color:#2b569b;">{{ project.title }}</a></div>
+
+                <!--CARD Picture-->
+                <img src="{{ project.image }}" style="width:100%; aspect-ratio:2/1; object-fit:cover;">
+
+                <div class="p-3">
+                    <!-- CARD Publishing Date-->
+                    <p style="font-weight:bold">Published {{ project.date | date: "%d %B %Y" }}</p>
+
+                    <!--CARD Summary-->
+                    <div style="overflow:hidden;" class="mb-3">
+                        <div style="overflow:hidden; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:5; line-clamp:5;">
+                            {{ project.summary }}
+                        </div>
+                    </div>
+
+                    <!--CARD Link-->
+                    <a target="_blank" href="{{ project.url }}">
+                        <u class="h5" style="color:#2b569b">Access project resources here</u>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,48 @@
+---
+layout: blog
+title: Journal
+permalink: /journal/
+---
+
+<div class="container">
+    <div class="h1 mt-4 mb-4 text-center">Articles</div>
+
+    {% assign all_articles = site.articles | sort: "date" | reverse %}
+
+    <div class="row mb-5">
+        {% for article in all_articles %}
+        <div class="col-12 col-md-6 mb-4">
+
+            <div class="mt-0" style="background-color: #FDD24F; border-radius:5px">
+
+                <div class="ml-3 mb-3"><span style="width:fit-content; background-color: #2b569b; padding:10px; border-radius: 5px 5px 5px 5px; color: white;">Article</span></div>
+
+                <!--CARD Title-->
+                <div class="h2 pl-4 pr-4 pb-3"><a href="{{ article.url }}" style="color:#2b569b;">{{ article.title }}</a></div>
+
+                <!--CARD Picture-->
+                <img src="{{ article.image }}" style="width:100%; aspect-ratio:2/1; object-fit:cover;">
+
+                <div class="p-3">
+                    <!-- CARD Publishing Date-->
+                    <p style="font-weight:bold">Published {{ article.date | date: "%d %B %Y" }}</p>
+
+                    <!--CARD Summary-->
+                    <div style="overflow:hidden;" class="mb-3">
+                        <div style="overflow:hidden; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:5; line-clamp:5;">
+                            {{ article.summary }}
+                        </div>
+                    </div>
+
+                    <!--CARD Link-->
+                    <a target="_blank" href="{{ article.url }}">
+                        <u class="h5" style="color:#2b569b">Access article resources here</u>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,9 @@
+collections:
+  articles:
+    output: true
+  projects:
+    output: true
+  studies:
+    output: true
+  events:
+    output: true
