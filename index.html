@@ -100,7 +100,7 @@
                 </span>
             </div>
 
-            <div class="h2 pl-4 pr-4 pb-3"><a href="{{ post.url }}" style="color:#2b569b;">{{ post.title }}</a></div>
+            <div class="h2 pl-4 pr-4 pb-3"><a href="{{ post.url | relative_url }}" style="color:#2b569b;">{{ post.title }}</a></div>
 
             <img src="{{ post.image }}" style="width:100%; aspect-ratio:2/1; object-fit:cover;">
 
@@ -113,7 +113,7 @@
                     </div>
                 </div>
 
-                <a target="_blank" href="{{ post.url }}">
+                <a target="_blank" href="{{ post.url | relative_url }}">
                     <u class="h5" style="color:#2b569b">Read more here</u>
                 </a>
             </div>

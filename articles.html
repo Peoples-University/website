@@ -18,7 +18,7 @@ permalink: /journal/
                 <div class="ml-3 mb-3"><span style="width:fit-content; background-color: #2b569b; padding:10px; border-radius: 5px 5px 5px 5px; color: white;">Article</span></div>
 
                 <!--CARD Title-->
-                <div class="h2 pl-4 pr-4 pb-3"><a href="{{ article.url }}" style="color:#2b569b;">{{ article.title }}</a></div>
+                <div class="h2 pl-4 pr-4 pb-3"><a href="{{ article.url | relative_url }}" style="color:#2b569b;">{{ article.title }}</a></div>
 
                 <!--CARD Picture-->
                 <img src="{{ article.image }}" style="width:100%; aspect-ratio:2/1; object-fit:cover;">
@@ -35,7 +35,7 @@ permalink: /journal/
                     </div>
 
                     <!--CARD Link-->
-                    <a target="_blank" href="{{ article.url }}">
+                    <a target="_blank" href="{{ article.url | relative_url }}">
                         <u class="h5" style="color:#2b569b">Access article resources here</u>
                     </a>
                 </div>
