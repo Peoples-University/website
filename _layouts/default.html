@@ -30,10 +30,10 @@
     {% if page.collection %}
 <div class="container mt-4">
     <a href="{% case page.collection %}
-                {% when 'articles' %}/journal
-                {% when 'projects' %}/projects
-                {% when 'studies' %}/studies
-                {% when 'past_events' %}/events
+                {% when 'articles' %}/website/journal
+                {% when 'projects' %}/website/projects
+                {% when 'studies' %}/website/studies
+                {% when 'past_events' %}/website/events
              {% endcase %}"
        class="btn btn-primary btn-sm">
         Back to
