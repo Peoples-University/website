@@ -2,12 +2,12 @@
 title: 'Kanksha Article'
 layout: default
 date: 2026-06-31
-author: My Baby
+author: Kanksha Chawla
 tags: [bureaucracy, labour, democratic]
-image: https://cdn1.lifestyleguide.com/usersfolder/SG5afa68ae0ea90/23-10-18-04-34-10-kanksha-chawla.jpg&square
+image: https://media.jacobin.com/images/2026/4/721239171342.png
 link: "##"
 summary: >
-    Kanksha Chawla is the best. She eats rajma!!! Kanksha Chawla is the best. She eats rajma!!! Kanksha Chawla is the best. She eats rajma!!! Kanksha Chawla is the best. She eats rajma!!! Kanksha Chawla is the best. She eats rajma!!! Kanksha Chawla is the best. She eats rajma!!! Kanksha Chawla is the best. She eats rajma!!! Kanksha Chawla is the best. She eats rajma!!! Kanksha Chawla is the best. She eats rajma!!! Kanksha Chawla is the best. She eats rajma!!! Kanksha Chawla is the best. She eats rajma!!! 
+    Throughout his prolific career as a left-wing economist, Anwar Shaikh has kept asking the right questions about the dynamics of capitalism. Shaikh has given us a powerful framework for understanding the system and its fundamental flaws. 
 ---
 
 The capitalist production process is characterized around private ownership of the means of production. This divides people into two general classes – those who own the factories, workplaces and tools of production and those who sell their labour power to survive. The production process is therefore a social relation where capital commands labour. 
