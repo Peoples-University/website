@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 collections:
   articles:
     output: true
@@ -7,3 +8,18 @@ collections:
     output: true
   events:
     output: true
+=======
+title: Workers Make Possible
+description: Advancing workers' rights in Singapore
+baseurl: ""
+url: "https://workersmakepossible.com"
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+>>>>>>> a3b099825d89ad4fd5a8b5da6baad2d227e6f3cc
