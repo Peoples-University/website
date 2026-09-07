@@ -6,6 +6,7 @@
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <title>{{ page.title }} | The People's University Project</title>
 </head>
 
@@ -14,13 +15,13 @@
     <!-- =========== NAV ===========-->
     <div class="container-fluid pt-3 pb-3 fixed-top" style="background-color:#9090f3;">
         <div class="text-center">
-            <div class="h1" style="color:black;">The People's University Project</div>
-            <div class="h4 mt-2">
-                <a href="/website/index" class="btn btn-primary ml-1" role="button"><i class="bi bi-house-heart-fill"></i></a>
-                <a href="/website/about" class="btn btn-primary ml-1" role="button">ABOUT</a>
-                <a href="/website/journal" class="btn btn-primary ml-1" role="button">JOURNAL</a>
-                <a href="/website/projects" class="btn btn-primary ml-1" role="button">PROJECTS</a>
-                <a href="/website/studies" class="btn btn-primary ml-1" role="button">STUDIES</a>
+            <div class="site-title" style="color:black;">The People's University Project</div>
+            <div class="h4 mt-2 d-flex flex-wrap justify-content-center" style="gap: 8px;">
+                <a href="/website/index" class="btn btn-primary btn-sm" role="button"><i class="bi bi-house-heart-fill"></i></a>
+                <a href="/website/about" class="btn btn-primary btn-sm" role="button">ABOUT</a>
+                <a href="/website/journal" class="btn btn-primary btn-sm" role="button">JOURNAL</a>
+                <a href="/website/projects" class="btn btn-primary btn-sm" role="button">PROJECTS</a>
+                <a href="/website/studies" class="btn btn-primary btn-sm" role="button">STUDIES</a>
             </div>
         </div>
     </div>
@@ -33,7 +34,7 @@
                 {% when 'studies' %}/studies
                 {% when 'past_events' %}/events
              {% endcase %}"
-       class="btn btn-primary">
+       class="btn btn-primary btn-sm">
         Back to
         {% case page.collection %}
             {% when 'articles' %}Journal
@@ -47,7 +48,7 @@
 
 
     <div class="container mt-3">
-        <div class="h1 pb-2">{{ page.title }}</div>
+        <div class="site-title pb-2">{{ page.title }}</div>
             <p style="font-weight:bold">
                 Published {{ page.date | date: "%d %B %Y" }}
                 {% if page.author %} · By {{ page.author }}{% endif %}

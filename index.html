@@ -9,6 +9,7 @@
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 
 
@@ -18,13 +19,13 @@
     <div class="container-fluid pt-3 pb-3 fixed-top" style="background-color:#9090f3;">
 
         <div class="text-center">
-            <div class="h1" style="color:black;">The People's University Project</div>
+            <div class="site-title" style="color:black;">The People's University Project</div>
 
-            <div class="h4 mt-2">
-                <a href="{{ site.baseurl }}/about" class="btn btn-primary ml-1" role="button">ABOUT</a>
-                <a href="{{ site.baseurl }}/journal" class="btn btn-primary ml-1" role="button">JOURNAL</a>
-                <a href="{{ site.baseurl }}/projects" class="btn btn-primary ml-1" role="button">PROJECTS</a>
-                <a href="{{ site.baseurl }}/studies" class="btn btn-primary ml-1" role="button">STUDIES</a>
+            <div class="h4 mt-2 d-flex flex-wrap justify-content-center" style="gap: 8px;">
+                <a href="{{ site.baseurl }}/about" class="btn btn-primary btn-sm" role="button">ABOUT</a>
+                <a href="{{ site.baseurl }}/journal" class="btn btn-primary btn-sm" role="button">JOURNAL</a>
+                <a href="{{ site.baseurl }}/projects" class="btn btn-primary btn-sm" role="button">PROJECTS</a>
+                <a href="{{ site.baseurl }}/studies" class="btn btn-primary btn-sm" role="button">STUDIES</a>
             </div>
         </div>
 
@@ -48,7 +49,7 @@
                 <div class="col-12 col-md-9">                 
                     
                     <!--EVENT Title-->
-                    <div class="h2 pt-10">{{ event.title }}</div>
+                    <div class="card-title pt-10">{{ event.title }}</div>
 
                     <!--EVENT Details-->
                     <p style="font-weight:bold">{{ event.date | date: "%d %B %Y" }}, {{ event.time }}, @ {{ event.location }}</p>
@@ -100,7 +101,7 @@
                 </span>
             </div>
 
-            <div class="h2 pl-4 pr-4 pb-3"><a href="{{ post.url | relative_url }}" style="color:#2b569b;">{{ post.title }}</a></div>
+            <div class="card-title pl-4 pr-4 pb-3"><a href="{{ post.url | relative_url }}" style="color:#2b569b;">{{ post.title }}</a></div>
 
             <img src="{{ post.image }}" style="width:100%; aspect-ratio:2/1; object-fit:cover;">
 

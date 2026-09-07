@@ -1,0 +1,44 @@
+/* ===== NAV TITLE ===== */
+.site-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+@media (max-width: 576px) {
+    .site-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}
+
+/* ===== CARD TITLES ===== */
+.card-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+@media (max-width: 576px) {
+    .card-title {
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+}
+
+/* ===== CARD FLOW LAYOUT ===== */
+.post-columns {
+    column-count: 1;
+    column-gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .post-columns {
+        column-count: 2;
+    }
+}
+
+.post-card {
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 1rem;
+}
