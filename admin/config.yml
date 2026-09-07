@@ -2,7 +2,7 @@ backend:
   name: github
   repo: Peoples-University/website
   branch: main
-  base_url: https://your-oauth-proxy-url.com   # from the OAuth proxy step
+  base_url: https://decap-proxy-production-88da.up.railway.app   # from the OAuth proxy step
 
 media_folder: "assets/images"   # where uploaded images get saved
 public_folder: "/assets/images" # how that path is referenced in the built site
