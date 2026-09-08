@@ -13,52 +13,24 @@
 <body>
 
     <!-- =========== NAV ===========-->
-    <div class="container-fluid pt-3 pb-3 fixed-top navbar">
+    <div class="container-fluid pt-3 pb-3 fixed-top qlnavbar">
 
         <div class="text-center">
-            <a href="{{ site.baseurl }}/" class="site-title-link">
-                <div class="site-title" style="color: white;">The People's University Project</div>
+            <a href="{{ site.baseurl }}/" class="qlsite-title">
+                <div class="qlsite-title" style="color: white;">The People's University Project</div>
             </a>
 
-            <div class="h4 mt-2 nav-buttons">
-                <a href="{{ site.baseurl }}/about" class="btn btn-primary nav-btn" role="button">ABOUT</a>
-                <a href="{{ site.baseurl }}/journal" class="btn btn-primary nav-btn" role="button">JOURNAL</a>
-                <a href="{{ site.baseurl }}/projects" class="btn btn-primary nav-btn" role="button">PROJECTS</a>
-                <a href="{{ site.baseurl }}/studies" class="btn btn-primary nav-btn" role="button">STUDIES</a>
+            <div class="h4 mt-2 qlnav-buttons">
+                <a href="{{ site.baseurl }}/about" class="btn btn-primary qlnav-btn" role="button">ABOUT</a>
+                <a href="{{ site.baseurl }}/journal" class="btn btn-primary qlnav-btn" role="button">JOURNAL</a>
+                <a href="{{ site.baseurl }}/projects" class="btn btn-primary qlnav-btn" role="button">PROJECTS</a>
+                <a href="{{ site.baseurl }}/studies" class="btn btn-primary qlnav-btn" role="button">STUDIES</a>
             </div>
         </div>
 
     </div>
 
 
-    {% if page.collection %}
-<div class="container mt-4">
-    <a href="{% case page.collection %}
-                {% when 'articles' %}/website/journal
-                {% when 'projects' %}/website/projects
-                {% when 'studies' %}/website/studies
-                {% when 'events' %}/website
-             {% endcase %}"
-       class="btn btn-primary btn-sm">
-        Back to
-        {% case page.collection %}
-            {% when 'articles' %}Journal
-            {% when 'projects' %}Projects
-            {% when 'studies' %}Studies
-            {% when 'events' %}Home
-        {% endcase %}
-    </a>
-</div>
-{% endif %}
-
-
-    <div class="container mt-3">
-        <div class="site-title pb-2">{{ page.title }}</div>
-            <p style="font-weight:bold">
-                Published {{ page.date | date: "%d %B %Y" }}
-                {% if page.author %} · By {{ page.author }}{% endif %}
-            </p>
-        </div>
     
     <!-- =========== PAGE CONTENT =========== -->
      <div class="container mt-3">

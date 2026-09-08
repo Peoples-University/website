@@ -2,12 +2,14 @@
 .site-title {
     font-size: 2.5rem;
     font-weight: bold;
+    color: black ;
 }
 
 @media (max-width: 576px) {
     .site-title {
         font-size: 1.5rem;
         font-weight: bold;
+        color: black;
     }
 }
 
@@ -62,4 +64,141 @@ figcaption {
   margin: 0 auto;
   max-width: 100%;
   height: auto;
+}
+
+.nav-buttons{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 8px;
+    gap: 4px;
+    justify-content: center;
+}
+
+.nav-btn {
+    flex: 0 1 auto;
+    min-width: 0;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: clamp(0.55rem, 3vw, 1rem);
+    padding: 0.4em 0.6em;
+    background-color: #ff6b4dff;
+    color: black;
+    font-weight: bold;
+}
+
+.nav-btn:hover {
+    background-color: #28c840ff;;
+}
+
+.navbar {
+    background-color: #2b569b;
+    justify-content: center;
+}
+
+/* ===== QUARTO LAYOUTS! ===== */
+
+.qlnav-buttons{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 8px;
+    gap: 4px;
+    justify-content: center;
+}
+
+.qlnav-btn {
+    flex: 0 1 auto;
+    min-width: 0;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: clamp(0.55rem, 3vw, 1rem);
+    padding: 0.4em 0.6em;
+    background-color: #ff6b4dff;
+    color: black;
+    font-weight: bold;
+}
+
+.qlnav-btn:hover {
+    background-color: #28c840ff;;
+}
+
+.qlnavbar {
+    background-color: #2b569b;
+    justify-content: center !;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: #2b569b;
+    color: white;
+    padding: 2rem 0 1.5rem;
+    margin-top: 3rem;
+}
+
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    background-color: white;
+}
+
+.footer-title {
+    font-weight: bold;
+    font-size: clamp(1rem, 3vw, 1.4rem);
+}
+
+.footer-social {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-icon {
+    color: white;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s ease;
+}
+
+.footer-icon:hover {
+    color: #ff6b4d;
+}
+
+.footer-divider {
+    border-color: rgba(255,255,255,0.25);
+    margin: 1.5rem 0 1rem;
+}
+
+.footer-bottom p {
+    font-size: 0.85rem;
+    text-align: center;
+    margin: 0;
+    color: rgba(255,255,255,0.85);
+}
+
+.footer-bottom a {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-bottom a:hover {
+    color: #ff6b4d;
 }

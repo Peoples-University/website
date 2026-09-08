@@ -50,17 +50,14 @@ collections:
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: "events"
-    label: "Past Events"
-    folder: "_events"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Location", name: "location", widget: "string" }
-      - { label: "Calendar Link", name: "calendarlink", widget: "string", required: false, hint: "Google Calendar link or .ics file URL" }
-      - { label: "Tags", name: "tags", widget: "list", required: false }
-      - { label: "Image", name: "image", widget: "image", required: false }
-      - { label: "Summary", name: "summary", widget: "text" }
-      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "about"
+        label: "About Page"
+        file: "about.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Date", name: "date", widget: "datetime" }
+          - { label: "Author", name: "author", widget: "string", default: "People's University Committee"}
+          - { label: "Body", name: "body", widget: "markdown" }
