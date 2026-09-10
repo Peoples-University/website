@@ -42,8 +42,7 @@
 
             <div class="row p-3">
 
-                {% assign new_event = site.events | sort:"date" | reverse | limit: 1 %}
-                {% for event in new_event %}
+                {% assign event = site.events | sort: "date" | last %}
 
                 <!--EVENT Poster-->
                 <div class="col-12 col-md-3 mb-3">
@@ -77,8 +76,6 @@
 					</div>
 
                 </div>
-
-                {% endfor %}
                 
             </div>
 
