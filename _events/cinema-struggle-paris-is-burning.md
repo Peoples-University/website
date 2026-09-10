@@ -7,7 +7,7 @@ calendarlink: "##"
 registerlink: https://www.eventbrite.ca/e/cinema-struggle-tickets-1986849327824
 author: People's University Committee
 tags: []
-image: https://github.com/Peoples-University/website/blob/main/assets/images/Jun_CS.jpg
+image: https://raw.githubusercontent.com/Peoples-University/website/refs/heads/main/assets/images/Jun_CS.jpg
 summary: Where does voguing come from, and what, exactly, is throwing shade?
   This landmark documentary provides a vibrant snapshot of the 1980s through the
   eyes of New York City’s African American and Latinx Harlem drag-ball scene.
