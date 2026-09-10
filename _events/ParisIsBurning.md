@@ -6,7 +6,7 @@ summary: When the communist government raises food prices in 1962, the
 layout: default
 title: "Cinema & Struggle: Dear Comrades"
 date: 01-05--0700
-time: 6pm
+time: 6 - 9pm
 location: SFU Harbour Centre, Fletcher Challenge Theatre
 calendarlink: "##"
 registerlink: https://www.eventbrite.ca/e/cinema-struggle-tickets-1986849327824
