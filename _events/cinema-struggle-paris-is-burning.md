@@ -1,6 +1,6 @@
 ---
 title: "Cinema & Struggle: Paris is Burning"
-date: 05-06--0700
+date: 05-06-2026
 time: 6pm - 9pm
 location: SFU Harbour Centre, Fletcher Challenge Theatre
 calendarlink: "##"
