@@ -4,13 +4,26 @@ backend:
   branch: main
   base_url: https://decap-proxy-production-88da.up.railway.app   # from the OAuth proxy step
 
-media_folder: "assets/images"   # where uploaded images get saved
-public_folder: "/assets/images" # how that path is referenced in the built site
+media_folder: "assets/images"
+public_folder: "/assets/images"
 
 collections:
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "about"
+        label: "About Page"
+        file: "about.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Date", name: "date", widget: "datetime" }
+          - { label: "Author", name: "author", widget: "string", default: "People's University Committee"}
+          - { label: "Body", name: "body", widget: "markdown" }
+
   - name: "journal-articles"
     label: "Journal Articles"
-    folder: "_articles"        # adjust to match your actual collection folder
+    folder: "_articles"
     create: true
     slug: "{{slug}}"
     fields:
@@ -38,7 +51,7 @@ collections:
 
   - name: "studies"
     label: "Studies"
-    folder: "_studies"        # adjust to match your actual collection folder
+    folder: "_studies"
     create: true
     slug: "{{slug}}"
     fields:
@@ -50,14 +63,20 @@ collections:
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: "pages"
-    label: "Pages"
-    files:
-      - name: "about"
-        label: "About Page"
-        file: "about.md"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Date", name: "date", widget: "datetime" }
-          - { label: "Author", name: "author", widget: "string", default: "People's University Committee"}
-          - { label: "Body", name: "body", widget: "markdown" }
+  - name: "events"
+    label: "Past Events"
+    folder: "_events"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "DD-MM-YYY" }
+      - { label: "Time", name: "time", widget: "string", hint: "Eg: 1pm - 6pm" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Calendar Link", name: "calendarlink", widget: "string" }
+      - { label: "Registration Link", name: "registerlink", widget: "string" }
+      - { label: "Author", name: "author", widget: "string", default: "People's University Committee"}
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
