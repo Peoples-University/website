@@ -36,7 +36,7 @@
     </div>
 
     <!-- =========== UPCOMING EVENT ===========-->
-    <div class="container mt-5">
+    <div class="container mt-5 pb-3">
         <div style="background-color: #FDD24F; border-radius:5px;">
             <div class="ml-3 mb-3"><span style="width:fit-content; background-color: #2b569b; padding:10px; border-radius: 5px 5px 5px 5px; color: white;">UPCOMING EVENT</span></div>
 
@@ -92,9 +92,9 @@
 
     <div class="card-columns mb-5">
         {% for post in all_posts %}
-        <div class ="mb-3" style="background-color: #FDD24F; border-radius:5px; break-inside: avoid;">
+        <div class ="mb-4" style="background-color: #FDD24F; border-radius:5px; break-inside: avoid;">
 
-            <div class="ml-3 mb-3 pt-3">
+            <div class="ml-3 mb-3">
                 <span style="width:fit-content; background-color: #2b569b; padding:10px; border-radius:5px; color: white;">
                     {% case post.collection %}
                         {% when "articles" %}ARTICLE
@@ -105,7 +105,7 @@
                 </span>
             </div>
 
-            <div class="card-title pl-4 pr-4 pb-3"><a href="{{ post.url | relative_url }}" style="color:#2b569b;">{{ post.title }}</a></div>
+            <div class="card-title pl-4 pr-4"><a href="{{ post.url | relative_url }}" style="color:#2b569b;">{{ post.title }}</a></div>
 
             <img src="{{ post.image }}" style="width:100%; aspect-ratio:2/1; object-fit:cover;">
 
