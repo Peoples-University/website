@@ -6,7 +6,7 @@ summary: Based on the book of the same name, the film follows a group of
   movie about the topic! Buy tickets while they're still cheap!
 layout: default
 title: "Cinema & Struggle: How to Blow up a Pipeline"
-date: 01-05--0700
+date: 04-09-2026
 time: 6 - 9pm
 location: SFU Harbour Centre, Fletcher Challenge Theatre
 calendarlink: "##"
