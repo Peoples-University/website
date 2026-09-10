@@ -1,11 +1,10 @@
 ---
-summary: >
-  When the communist government raises food prices in 1962, the rebellious
-  workers from the small industrial town of Novocherkassk go on strike. The
-  massacre which then ensues is seen through the eyes of a devout party
-  activist.
+summary: When the communist government raises food prices in 1962, the
+  rebellious workers from the small industrial town of Novocherkassk go on
+  strike. The massacre which then ensues is seen through the eyes of a devout
+  party activist.
 layout: default
-title: "Cinema & Struggle: Paris is Burning"
+title: "Cinema & Struggle: Dear Comrades"
 date: 01-05--0700
 time: 6pm
 location: SFU Harbour Centre, Fletcher Challenge Theatre
