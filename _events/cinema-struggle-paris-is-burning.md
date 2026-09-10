@@ -19,6 +19,12 @@ summary: Where does voguing come from, and what, exactly, is throwing shade?
 ---
 **Interested in joining the People’s University Committee? [Sign up here!](https://docs.google.com/forms/d/e/1FAIpQLSdWYZgrZ6rFgCRDztLIE_i2kkWJufG4NuBu3Ljw5WWFt7I-Eg/viewform)**
 
+
+
+![](/assets/images/Jun_CS.jpg)
+
+
+
 Where does voguing come from, and what, exactly, is throwing shade? This landmark documentary provides a vibrant snapshot of the 1980s through the eyes of New York City’s African American and Latinx Harlem drag-ball scene. Made over seven years, PARIS IS BURNING offers an intimate portrait of rival fashion “houses,” from fierce contests for trophies to house mothers offering sustenance in a world rampant with homophobia, transphobia, racism, AIDS, and poverty. Featuring legendary voguers, drag queens, and trans women — including Willi Ninja, Pepper LaBeija, Dorian Corey, and Venus Xtravaganza.
 
 Stick around after the film for a lively debate and discussion on the political themes of the film and the way we see those things play out in real life today!
