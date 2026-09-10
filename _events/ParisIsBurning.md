@@ -13,7 +13,7 @@ registerlink: https://www.eventbrite.ca/e/cinema-struggle-tickets-1986849327824
 author: People's University Committee
 tags: []
 link: "##"
-image: /assets/images/669979557_18340105282245090_201772617719999014_n.jpg
+image: https://raw.githubusercontent.com/Peoples-University/website/refs/heads/main/assets/images/May_CS.jpg
 ---
 **Interested in joining the People's University Committee? [Sign up here!](https://docs.google.com/forms/d/e/1FAIpQLSdWYZgrZ6rFgCRDztLIE_i2kkWJufG4NuBu3Ljw5WWFt7I-Eg/viewform)**
 
