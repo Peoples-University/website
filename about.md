@@ -1,11 +1,10 @@
 ---
-title: About the People's University Committee
+title: About us
 layout: default
 date: 2026-09-08T17:23:00.000-07:00
 author: People's University Committee
 ---
-The People's University Project \
-[Email](mailto:peoplesuniversity@sfpirg.ca)    |    [Instagram](https://www.instagram.com/peoplesuniversityproject/)    |    [Linktree](https://linktr.ee/peoplesuni)
+### **Contact us here: [Email](mailto:peoplesuniversity@sfpirg.ca)    |    [Instagram](https://www.instagram.com/peoplesuniversityproject/)    |    [Linktree](https://linktr.ee/peoplesuni)**
 
 The People’s University Project is an organization which **aims to democratically intervene** in the activities of the masses in the greater Vancouver area in order to **raise their political and class consciousness**, **promote working class self-activity** in the process of building revolutionary mass organizations, and produce **ideological theory** that responds to contemporary problems.
 
@@ -59,8 +58,6 @@ General members of the People’s University Project(PUP) are members that are i
 7. Are encouraged to join working groups focused on **position papers** where they can contribute insights, offer critical feedback, or assume responsibility for **scientific investigation** and the drafting of specific sections.
 8. Can **access materials produced by PUC if requested**.
 9. Are **encouraged to write and share reports** about their experiences in political organizations and comment on the political, organizational, and ideological character of said experiences
-
-
 
 # Cinema and Struggle
 
