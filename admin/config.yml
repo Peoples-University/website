@@ -70,13 +70,13 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime", date_format: "DD-MM-YYY" }
+      - { label: "Date", name: "date", widget: "date", format: "YYYY-MM-DD" }
       - { label: "Time", name: "time", widget: "string", hint: "Eg: 1pm - 6pm" }
       - { label: "Location", name: "location", widget: "string" }
       - { label: "Calendar Link", name: "calendarlink", widget: "string" }
       - { label: "Registration Link", name: "registerlink", widget: "string" }
       - { label: "Author", name: "author", widget: "string", default: "People's University Committee"}
       - { label: "Tags", name: "tags", widget: "list", required: false }
-      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Image", name: "image", widget: "string", required: false }
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
