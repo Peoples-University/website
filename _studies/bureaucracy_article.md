@@ -18,4 +18,6 @@ tags:
 link: "##"
 image: /assets/images/state-and-revolution-poster.png
 ---
-\-
+Presentation : https://docs.google.com/presentation/d/1-oSeyTGDB1iqhVwCpfmwBmCbYeJgA4Sn4rYlsh1lz70/edit\
+\
+Handout : https://docs.google.com/document/d/11_e3GOZTRZ-J61UzsHRwgfKHc0v2B96ofxp2nsjZoow/edit?usp=drive_web&ouid=110570157614302481515
