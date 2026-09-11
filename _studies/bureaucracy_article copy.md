@@ -17,4 +17,4 @@ tags:
 link: "##"
 image: /assets/images/class-war.png
 ---
-.
+Presentation : https://docs.google.com/presentation/d/1yDX-kqDO17j5CPVd9AtpC7RSZy7Na5V5sd56A2iAwdI/edit
