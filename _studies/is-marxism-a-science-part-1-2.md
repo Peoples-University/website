@@ -7,7 +7,7 @@ tags:
   - Marxism
   - Science
   - Philosophy
-image: /website/assets/images/is-marxism-a-science-poster.png
+image: /assets/images/is-marxism-a-science-poster.png
 summary: >
   What is a science? In the organizing space, we often talk about science,
   without having a concrete definition of what makes something scientific.
