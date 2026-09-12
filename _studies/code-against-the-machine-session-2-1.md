@@ -41,6 +41,8 @@ summary: >-
   Week 13 - Scientific Communication for the Working Class
 layout: default
 ---
+![](/website/assets/images/code-against-the-machine-315-x-157-px-.png)
+
 Presentation :https://docs.google.com/presentation/d/1zlLYRXlGv1pXbxPsSEkOl5-I5Jt59c3NqHfC0Gyphgk/edit?usp=drive_link
 
 Handout : https://docs.google.com/document/d/1j7wL0EFnCY67jVmeIr59OvKn1MLXH-LFyw8zAqFe84o/edit?usp=drive_link
