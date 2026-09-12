@@ -5,7 +5,7 @@ backend:
   base_url: https://decap-proxy-production-88da.up.railway.app   # from the OAuth proxy step
 
 media_folder: "assets/images"
-public_folder: "/website/assets/images"
+public_folder: "/assets/images"
 
 collections:
 
