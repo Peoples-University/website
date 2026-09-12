@@ -1,0 +1,42 @@
+---
+layout: blog
+title: Events
+permalink: /events/
+---
+
+<div class="container mt-3">
+    {% assign all_events = site.events | sort: "date" | reverse %}
+
+    <div class="site-title mt-4 mb-4 text-center">Events</div>
+
+    <div class="card-columns mb-5">
+        {% for event in all_events %}
+        <div class ="mb-4" style="background-color: #FDD24F; border-radius:5px; break-inside: avoid;">
+
+            <div class="ml-3 mb-3">
+                <span style="width:fit-content; background-color: #2b569b; padding:10px; border-radius:5px; color: white;">
+                    EVENT
+                </span>
+            </div>
+
+            <div class="card-title pl-4 pr-4"><a href="{{ event.url | relative_url }}" style="color:#2b569b;">{{ event.title }}</a></div>
+
+            <img src="{{ event.image }}" style="width:100%; aspect-ratio:2/1; object-fit:cover;">
+
+            <div class="p-3">
+                <p style="font-weight:bold">Published {{ event.date | date: "%d %B %Y" }}</p>
+
+                <div style="overflow:hidden;" class="mb-3">
+                    <div style="overflow:hidden; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:5; line-clamp: 5;">
+                        {{ event.summary }}
+                    </div>
+                </div>
+
+                <a target="_blank" href="{{ event.url | relative_url }}">
+                    <u class="h5" style="color:#2b569b">View event summary here</u>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
