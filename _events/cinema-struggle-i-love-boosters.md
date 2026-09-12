@@ -17,6 +17,7 @@ summary: 'I Love Boosters is a recently released absurdist crime comedy film
   asks us: When theft defines a social system, what’s the difference between the
   individual acts of ordinary people and the collective behavior of the
   powerful?"'
+layout: default
 ---
 **Interested in joining the People’s University Committee? [Sign up here!](https://docs.google.com/forms/d/e/1FAIpQLSdWYZgrZ6rFgCRDztLIE_i2kkWJufG4NuBu3Ljw5WWFt7I-Eg/viewform)**
 

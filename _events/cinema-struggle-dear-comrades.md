@@ -14,6 +14,7 @@ author: People's University Committee
 tags: []
 link: "##"
 image: https://raw.githubusercontent.com/Peoples-University/website/refs/heads/main/assets/images/May_CS.jpg
+layout: default
 ---
 **Interested in joining the People's University Committee? [Sign up here!](https://docs.google.com/forms/d/e/1FAIpQLSdWYZgrZ6rFgCRDztLIE_i2kkWJufG4NuBu3Ljw5WWFt7I-Eg/viewform)**
 

@@ -34,6 +34,7 @@ collections:
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "default" }
 
   - name: "projects"
     label: "Projects"
@@ -48,6 +49,7 @@ collections:
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "quartolayout" }
 
   - name: "studies"
     label: "Studies"
@@ -62,6 +64,7 @@ collections:
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "default" }
 
   - name: "events"
     label: "Past Events"
@@ -80,3 +83,4 @@ collections:
       - { label: "Image", name: "image", widget: "string" }
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "default" }

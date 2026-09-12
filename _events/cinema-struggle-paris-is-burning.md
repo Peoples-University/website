@@ -16,6 +16,7 @@ summary: Where does voguing come from, and what, exactly, is throwing shade?
   sustenance in a world rampant with homophobia, transphobia, racism, AIDS, and
   poverty. Featuring legendary voguers, drag queens, and trans women — including
   Willi Ninja, Pepper LaBeija, Dorian Corey, and Venus Xtravaganza.
+layout: default
 ---
 **Interested in joining the People’s University Committee? [Sign up here!](https://docs.google.com/forms/d/e/1FAIpQLSdWYZgrZ6rFgCRDztLIE_i2kkWJufG4NuBu3Ljw5WWFt7I-Eg/viewform)**
 
