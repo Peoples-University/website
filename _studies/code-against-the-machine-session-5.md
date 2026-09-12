@@ -1,6 +1,6 @@
 ---
 title: Code Against the Machine Session 5
-date: 2026-07-29T18:00:00.000-07:00
+date: 2026-08-01T00:14:00.000-07:00
 author: People's University Committee
 image: /website/assets/images/code-against-the-machine-315-x-157-px-.png
 summary: >-
