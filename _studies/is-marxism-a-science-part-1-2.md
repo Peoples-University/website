@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Is Marxism a Science?(Part 1 & 2)
 date: 2026-05-16T14:00:00.000-07:00
 author: People's University Committee

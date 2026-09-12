@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Code Against the Machine Session 3
 date: 2026-06-28T18:00:00.000-07:00
 author: People's University Committee

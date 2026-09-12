@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Socialism: Scientific or Utopian?"
 date: 2026-01-21T18:00:00.000-08:00
 author: People's University Committee
