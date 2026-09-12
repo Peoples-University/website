@@ -6,6 +6,9 @@ author: People's University Committee
 ---
 #### **Contact us here: [Email](mailto:peoplesuniversity@sfpirg.ca)    |    [Instagram](https://www.instagram.com/peoplesuniversityproject/)    |    [Linktree](https://linktr.ee/peoplesuni)**
 
+![](/website/assets/images/about.png)
+
+
 
 # Our Objectives
 
