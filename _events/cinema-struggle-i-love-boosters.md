@@ -21,7 +21,7 @@ layout: default
 ---
 **Interested in joining the People’s University Committee? [Sign up here!](https://docs.google.com/forms/d/e/1FAIpQLSdWYZgrZ6rFgCRDztLIE_i2kkWJufG4NuBu3Ljw5WWFt7I-Eg/viewform)**
 
-![](/assets/images/Aug_CS.jpg)
+![](/website/assets/images/Aug_CS.jpg)
 
 I Love Boosters is a recently released absurdist crime comedy film written and directed by Boots Riley, a famous activist, musician and director. The film follows a group of shoplifters with a passion for fashion.
 

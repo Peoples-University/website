@@ -18,6 +18,6 @@ image: https://raw.githubusercontent.com/Peoples-University/website/refs/heads/m
 ---
 **Interested in joining the People's University Committee? [Sign up here!](https://docs.google.com/forms/d/e/1FAIpQLSdWYZgrZ6rFgCRDztLIE_i2kkWJufG4NuBu3Ljw5WWFt7I-Eg/viewform)**
 
-![](/assets/images/Sep_CS.jpg)
+![](/website/assets/images/Sep_CS.jpg)
 
 Based on the book of the same name, the film follows a group of youngsters that take extreme actions to address the existing climate crisis. The film brings up important questions about what we should be doing today to address the climate crisis, and we hope to spark a lively discussion after the movie about the topic! Buy tickets while they're still cheap!

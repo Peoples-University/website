@@ -61,6 +61,6 @@ General members of the People’s University Project(PUP) are members that are i
 
 # Cinema and Struggle
 
-![](website/assets/images/791959732_18094777226178668_8336088819906518570_n.jpg)
+![](/website/assets/images/791959732_18094777226178668_8336088819906518570_n.jpg)
 
 Cinema & Struggle is a committee of the People's University Project. It was established in Summer of 2026 to host popular movies and hold political discussions around these movies. We're now opening up our membership to anyone that wants to join. If you're someone who has a passion for cinema, and wants to facilitate political discussion around it, join us. Fill in [this form](https://docs.google.com/forms/d/e/1FAIpQLSdWYZgrZ6rFgCRDztLIE_i2kkWJufG4NuBu3Ljw5WWFt7I-Eg/viewform) to sign up.

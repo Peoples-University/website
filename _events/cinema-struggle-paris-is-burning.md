@@ -22,7 +22,7 @@ layout: default
 
 
 
-![](/assets/images/Jun_CS.jpg)
+![](/website/assets/images/Jun_CS.jpg)
 
 
 

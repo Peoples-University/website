@@ -22,7 +22,7 @@ image: https://raw.githubusercontent.com/Peoples-University/website/refs/heads/m
 ---
 **Interested in joining the People's University Committee? [Sign up here!](https://docs.google.com/forms/d/e/1FAIpQLSdWYZgrZ6rFgCRDztLIE_i2kkWJufG4NuBu3Ljw5WWFt7I-Eg/viewform)**
 
-![](/assets/images/Jul_CS.jpg)
+![](/website/assets/images/Jul_CS.jpg)
 
 Join us for the third screening in our series of "First Friday Films". This month we'll be screening "No Other Choice", a South Korean film that follows a middle-class paper mill manager who is suddenly laid off.
 

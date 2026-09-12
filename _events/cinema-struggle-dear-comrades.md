@@ -20,7 +20,7 @@ layout: default
 
 
 
-![](/assets/images/May_CS.jpg)
+![](/website/assets/images/May_CS.jpg)
 
 
 
