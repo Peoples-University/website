@@ -10,7 +10,7 @@ tags:
   - polecon
   - political
   - economy
-image: /website/assets/images/code-against-the-machine-315-x-157-px-.png
+image: /assets/images/code-against-the-machine-315-x-157-px-.png
 summary: >-
   This Summer, the People's University is launching Code Against the Machine, a
   13-week course about coding, statistics, and political economy. This summer
