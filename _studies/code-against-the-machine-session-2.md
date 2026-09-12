@@ -1,7 +1,6 @@
 ---
-layout: default
 title: Code Against the Machine Session 3
-date: 2026-06-28T18:00:00.000-07:00
+date: 2026-06-21T18:00:00.000-07:00
 author: People's University Committee
 tags:
   - coding
@@ -48,6 +47,7 @@ summary: >-
   Week 12 - Regression Analysis II
 
   Week 13 - Scientific Communication for the Working Class
+layout: default
 ---
 Presentation : https://docs.google.com/presentation/d/18eyx4KgfKnZRe7ekNhrUXIgEfHkOyT18T1cwdbkjogk/edit?usp=drive_web&ouid=110570157614302481515\
 \
