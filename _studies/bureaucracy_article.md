@@ -16,7 +16,7 @@ tags:
   - labour
   - democratic
 link: "##"
-image: /assets/images/state-and-revolution-poster.png
+image: /website/assets/images/state-and-revolution-poster.png
 ---
 Presentation : https://docs.google.com/presentation/d/1-oSeyTGDB1iqhVwCpfmwBmCbYeJgA4Sn4rYlsh1lz70/edit\
 \
