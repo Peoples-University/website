@@ -1,7 +1,6 @@
 ---
-layout: default
 title: Code Against the Machine Session 1
-date: 2026-06-14T18:00:00.000-07:00
+date: 2026-06-02T18:00:00.000-07:00
 author: People's University Committee
 tags:
   - coding
@@ -48,6 +47,7 @@ summary: >-
   Week 12 - Regression Analysis II
 
   Week 13 - Scientific Communication for the Working Class
+layout: default
 ---
 This Summer, the People's University is launching Code Against the Machine, a 13-week course about coding, statistics, and political economy. This summer we'll be developing our understanding of information technology and computer programming vis-a-vis our application of statistical methods to the study of Canada's political economy.
 
