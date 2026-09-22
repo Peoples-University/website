@@ -1,0 +1,42 @@
+---
+layout: blog
+title: Organizer School
+permalink: /orgschool26/
+---
+
+<div class="container mt-3">
+    {% assign all_os = site.orgschool26 | sort: "date" | reverse %}
+
+    <div class="site-title mt-4 mb-4 text-center">Organizer School (Fall 2026)</div>
+
+    <div class="card-columns mb-5">
+        {% for os in all_os %}
+        <div class ="mb-4" style="background-color: #FDD24F; border-radius:5px; break-inside: avoid;">
+
+            <div class="ml-3 mb-3">
+                <span style="width:fit-content; background-color: #2b569b; padding:10px; border-radius:5px; color: white;">
+                    ORGANIZER SCHOOL
+                </span>
+            </div>
+
+            <div class="card-title pl-4 pr-4"><a href="{{ os.url | relative_url }}" style="color:#2b569b;">{{ os.title }}</a></div>
+
+            <img src="{{ os.image }}" style="width:100%; aspect-ratio:2/1; object-fit:cover;">
+
+            <div class="p-3">
+                <p style="font-weight:bold">Published {{ os.date | date: "%d %B %Y" }}</p>
+
+                <div style="overflow:hidden;" class="mb-3">
+                    <div style="overflow:hidden; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:5; line-clamp: 5;">
+                        {{ os.summary }}
+                    </div>
+                </div>
+
+                <a target="_blank" href="{{ os.url | relative_url }}">
+                    <u class="h5" style="color:#2b569b">Access session materials here</u>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

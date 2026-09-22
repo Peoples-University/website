@@ -7,5 +7,7 @@ collections:
     output: true
   events:
     output: true
+  orgschool26:
+    output: true
 
 baseurl: "/website"

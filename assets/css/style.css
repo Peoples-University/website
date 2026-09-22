@@ -218,3 +218,9 @@ figcaption {
     max-height: 45vh;
   }
 }
+
+.embedslides {
+  width: 100%; 
+  height: auto; 
+  aspect-ratio: 16/9;
+}
