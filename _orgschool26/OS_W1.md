@@ -1,5 +1,5 @@
 ---
-title: Organizer School U1 W1 - Science in General
+title: Organizer School Unit 1 Week 1 - Thinking Scientifically
 date: 2026-09-21
 author: People's University Committee
 image: /website/assets/images/organizerschool.png
@@ -7,7 +7,7 @@ summary: "In this session, we’ll explore the meaning of science and discuss wh
 layout: default
 ---
 
-### Introduction to Organizer School
+### Welcome to Organizer School!
 Welcome to Organizer School 2026! Organizer school is aimed at people who are **interested in organizing** or are already organizing and want to have a **critical understanding of the theory, historical practice, strategies & tactics that have been used in organizing**. Organizer school also gives you an opportunity to discuss and debate your ideas with other organizers in the city!
 
 ### How to prepare for this week's session
