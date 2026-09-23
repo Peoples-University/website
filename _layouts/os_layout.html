@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="icon" href="https://raw.githubusercontent.com/Peoples-University/website/refs/heads/main/assets/PUP%20Logo2.png">
+    <title>{{ page.title }} | The People's University Project</title>
+</head>
+
+<body>
+
+    <!-- =========== NAV ===========-->
+    <div class="container-fluid pt-3 pb-3 fixed-top navbar">
+
+        <div class="text-center">
+            <a href="{{ site.baseurl }}/" class="site-title-link">
+                <div class="site-title" style="color: white;">The People's University Project</div>
+            </a>
+
+            <div class="h4 mt-2 nav-buttons">
+                <a href="{{ site.baseurl }}/about" class="btn btn-primary nav-btn" role="button">ABOUT</a>
+                <a href="{{ site.baseurl }}/journal" class="btn btn-primary nav-btn" role="button">JOURNAL</a>
+                <a href="{{ site.baseurl }}/projects" class="btn btn-primary nav-btn" role="button">PROJECTS</a>
+                <a href="{{ site.baseurl }}/studies" class="btn btn-primary nav-btn" role="button">STUDIES</a>
+            </div>
+        </div>
+
+    </div>
+
+
+    {% if page.collection %}
+<div class="container mt-4">
+    <a href="{% case page.collection %}
+                {% when 'articles' %}/website/journal
+                {% when 'projects' %}/website/projects
+                {% when 'studies' %}/website/studies
+                {% when 'events' %}/website/events
+                {% when 'orgschool' %}/website/orgschool26
+             {% endcase %}"
+       class="btn btn-primary btn-sm">
+        Back to
+        {% case page.collection %}
+            {% when 'articles' %}Journal
+            {% when 'projects' %}Projects
+            {% when 'studies' %}Studies
+            {% when 'events' %}Events
+            {% when 'orgschool26' %}Organizer School
+        {% endcase %}
+    </a>
+</div>
+{% endif %}
+
+<div class="container mt-3 path" style="font-size:medium; color:lightslategrey">
+    <a href="{{ '/unit' | append: page.unit | relative_url }}">
+        Unit {{ page.unit }}
+    </a>
+     > Week {{ page.week }}
+</div>
+
+<div class="container mt-1">
+        <div style="font-size: larger; font-weight: bold">Organizer School Unit {{ page.unit }} Week {{page.week}}</div>
+        </div>
+
+<div class="container mt-3">
+        <h3 id="welcome-to-organizer-school">Welcome to Organizer School!</h3>
+            <p>Welcome to Organizer School 2026! Organizer school is aimed at people who are <strong>interested in organizing</strong> or are already organizing and want to have a <strong>critical understanding of the theory, historical practice, strategies and tactics that have been used in organizing</strong>. Organizer school also gives you an opportunity to discuss and debate your ideas with other organizers in the city!</p>
+
+            <p>We will be meeting every week for discussion sessions at LOCATION. In order to get the most out of our discussion sessions, we <strong>highly recommend</strong> that you <strong>come prepared</strong> by doing the <strong>required readings</strong> and reading through the <strong>session slides</strong> below!</p>
+
+            <p>All our in-person discussion sessions will involve discussing what you’ve learnt from the materials provided. Come prepared with <strong>your notes</strong> of what you’ve learnt from this session, and any <strong>questions</strong> you may have about the materials!</p>
+
+        <hr>
+
+        <h4 id="this-weeks-session">This week’s session</h4>
+
+        <h2 id="unit-1-week-1---thinking-scientifically">Unit {{ page.unit }}, Week {{ page.week }} - {{ page.title}}</h2>
+        <p><strong>Discussion Group Details</strong> <br>
+        📆 {{ page.date }} <br>
+        ⏰ {{ page.time }} (<a href="https://calendar.google.com/calendar/u/0/r?cid=c_8768494cf684804217c5a373541ee84838b7bd31a8c71d355cc0381602d349f7%40group.calendar.google.com">Add to calendar</a>) <br>
+        📍 {{ page.location }}</p>
+
+        <p> {{ page.summary }} </p>
+
+        <h2 id="required-readings">Required readings</h2>
+        <ul>
+        {% for book in page.books %}
+            <li> 
+                <a href="{{ book.reading_link }}">{{ book.reading_title }}</a>
+                by {{ book.reading_author }} ({{ book.reading_pagecount }} pages)</li>
+        {% endfor %}
+        </ul>
+
+        <h2 id="session-slides">Session Slides</h2>
+        <h3 id="press-s-to-access-the-notes-for-each-slide"><em>Press ‘S’ to access the notes for each slide!</em></h3>
+        <iframe class="embedslides" src="{{ page.slide_url }}" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+            </div>
+
+
+    
+    <!-- =========== PAGE CONTENT =========== -->
+     <div class="container mt-3">
+        {{ content }}
+    </div>
+
+<!-- =========== FOOTER =========== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+
+            <div class="footer-logo">
+                <img src="https://raw.githubusercontent.com/Peoples-University/website/refs/heads/main/assets/PUP%20Logo2.png" alt="PUC Logo" class="footer-logo-img">
+                <div class="footer-title">The People's University Project</div>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://www.instagram.com/peoplesuniversityproject/" target="_blank" rel="noopener" aria-label="Instagram" class="footer-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.24 2.22.4.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.35 1.05.4 2.22.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.8-.4 2.22-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.05.35-2.22.4-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.24-2.22-.4-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.35-1.05-.4-2.22C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.24-1.8.4-2.22.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.05-.35 2.22-.4C8.42 2.21 8.8 2.2 12 2.2zm0-2.2C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.39C1.35 2.68.94 3.35.63 4.14c-.3.76-.5 1.64-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.39 2.13.67.67 1.34 1.08 2.13 1.39.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.39.67-.67 1.08-1.34 1.39-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.31-.79-.72-1.46-1.39-2.13C21.32 1.35 20.65.94 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0z"/>
+                        <path d="M12 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4z"/>
+                        <circle cx="18.41" cy="5.59" r="1.44"/>
+                    </svg>
+                </a>
+                <a href="mailto:peoplesuniversity@sfpirg.ca" aria-label="Email" class="footer-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm19.4 2H2.6L12 12.6 21.4 6zM3 8.24V18h18V8.24l-8.42 6.16a1 1 0 0 1-1.16 0L3 8.24z"/>
+                    </svg>
+                </a>
+            </div>
+
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-bottom">
+            <p>
+                &copy; {{ 'now' | date: "%Y" }} The People's University Project. Content is licensed under
+                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>
+                — free to use, share, and adapt with attribution and permission.
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+function adjustNavPadding() {
+    const nav = document.querySelector('.fixed-top');
+    const navHeight = nav.offsetHeight;
+    document.body.style.paddingTop = navHeight + 'px';
+}
+window.addEventListener('load', adjustNavPadding);
+window.addEventListener('resize', adjustNavPadding);
+</script>
+
+</body>
+</html>
