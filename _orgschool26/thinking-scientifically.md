@@ -27,4 +27,3 @@ summary: "In this session, we’ll explore **the meaning of science** and
 layout: os_layout
 date: 21 September 2026
 ---
-Reading
