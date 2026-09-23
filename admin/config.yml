@@ -75,15 +75,13 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Unit", name: "unit", widget: "number" }
       - { label: "Week", name: "week", widget: "number" }
-      - { label: "Date", name: "date", widget: "string", hint: "eg: 23 December 1999" }
+      - { label: "Date", name: "datestring", widget: "string", hint: "eg: 23 December 1999" }
       - { label: "Time", name: "time", widget: "string", hint: "Eg: 1pm - 6pm" }
       - { label: "Slide URL", name: "slide_url", widget: "string", hint: "URL to the presentation slides" }
       - { label: "Author", name: "author", widget: "string", default: "People's University Committee"}
       - { label: "Tags", name: "tags", widget: "list", required: false }
       - { label: "Image", name: "image", widget: "image", required: false }
-      - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Location", name: "location", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
       - name: "books"
         label: "Reading List"
         widget: "list"
@@ -93,6 +91,7 @@ collections:
           - { label: "Reading Author", name: "reading_author", widget: "string" }
           - { label: "Reading Page Count", name: "reading_pagecount", widget: "number" }
           - { label: "Reading Link", name: "reading_link", widget: "string" }
+      - { label: "Summary", name: "summary", widget: "markdown" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "os_layout" }
 
   - name: "events"
