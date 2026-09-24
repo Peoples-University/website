@@ -1,5 +1,5 @@
 ---
-title: Thinking Scientifically (Unit 1, Week 1)
+title: Thinking Scientifically
 unit: 1
 week: 1
 datestring: 8 October 2026
