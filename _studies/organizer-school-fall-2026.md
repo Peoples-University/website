@@ -20,7 +20,9 @@ Every week, we will release session pages with all the materials you will need t
 **Discussion Group Details** \
 📆 **Every Thursday** starting 8 October 2026 \
 ⏰ 6-8pm ([Add to calendar](https://calendar.google.com/calendar/u/0/r?cid=c_8768494cf684804217c5a373541ee84838b7bd31a8c71d355cc0381602d349f7%40group.calendar.google.com)) \
-📍 **SFU Harbour Centre Room 2200** \
+📍 **SFU Harbour Centre Room 2200** 
+
+ ***
 
 ### Syllabus
 
@@ -31,8 +33,6 @@ Every week, we will release session pages with all the materials you will need t
 * Week 1 (8 Oct) - **[Thinking Scientifically](https://peoples-university.github.io/website/orgschool26/thinking-scientifically.html)**
 * Week 2 (15 Oct) - **Toward a Science of Society** 
 
-
-
 #### Unit 2: Science & Production
 
 ***In the three weeks that follow (from week 3 to 6),*** we’ll dip our toes into political economy, the study of society’s system of production (i.e. its economy). In our brief overview, we’ll learn about the role of economic forces in the development of history, what these forces can tell us about what’s going on in the world today, and how to evaluate the material, economic interests of different social groups based on their role in the economy (i.e. the interests of different classes).
@@ -40,8 +40,6 @@ Every week, we will release session pages with all the materials you will need t
 * Week 3 (22 Oct) - **The Birth of the Capitalist Mode of Production**
 * Week 4 (29 Oct) - **The Capitalist Production & Accumulation Process**
 * Week 5 (5 Nov) - **Imperialism and the General Crises of Capitalism**
-
-
 
 #### Unit 3: Science & Class Struggle
 
