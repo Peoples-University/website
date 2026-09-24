@@ -1,9 +1,9 @@
 ---
-title: Thinking Scientifically
+title: Thinking Scientifically (Unit 1, Week 1)
 unit: 1
 week: 1
-datestring: 21 September 2026
-time: 1-3pm
+datestring: 8 October 2026
+time: 6pm - 8pm
 slide_url: https://docs.google.com/presentation/d/e/2PACX-1vTs-AEegOAwbHgq8a-qV0dmKqL4TZRzq8aBbzasFNPgu8dHyxRJuIdxNsbaLRh_XIWaTubRtfvQ2dQu/pubembed?start=false&loop=false&delayms=3000
 author: People's University Committee
 image: /website/assets/images/organizerschool.png
