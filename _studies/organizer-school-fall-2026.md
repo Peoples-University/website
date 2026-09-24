@@ -18,8 +18,8 @@ We will be **meeting every week** for discussion sessions at **SFU Downtown**.
 Every week, we will release session pages with all the materials you will need to prepare for sessions, including slides and readings. Access all session pages in the [Organizer School Landing Page](https://peoples-university.github.io/website/orgschool26) or through this syllabus page, which will be updated weekly. 
 
 **Discussion Group Details**
-📆 **Every Thursday** starting 8 October 2026
-⏰ 6-8pm ([Add to calendar](https://calendar.google.com/calendar/u/0/r?cid=c_8768494cf684804217c5a373541ee84838b7bd31a8c71d355cc0381602d349f7%40group.calendar.google.com))
+📆 **Every Thursday** starting 8 October 2026 \
+⏰ 6-8pm ([Add to calendar](https://calendar.google.com/calendar/u/0/r?cid=c_8768494cf684804217c5a373541ee84838b7bd31a8c71d355cc0381602d349f7%40group.calendar.google.com)) \
 📍 **SFU Harbour Centre Room 2200**
 
 ### Syllabus
