@@ -1,14 +1,10 @@
 ---
-title: Organizer School (Fall 2026)
-date: 2026-09-24T13:00:00.000-07:00
+title: Organizer School Syllabus Page (Fall 2026)
+date: 2026-09-24
 author: People's University Committee
 image: /website/assets/images/organizerschool.png
 summary: Welcome to Organizer School 2026! Organizer school is aimed at people
-  who are interested in organizing or are already organizing and want to have a
-  critical understanding of the theory, historical practice, strategies and
-  tactics that have been used in organizing. Organizer school also gives you an
-  opportunity to discuss and debate your ideas with other organizers in the
-  city!
+  who are interested in organizing or are already organizing and want to have a critical understanding of the theory, historical practice, strategies and tactics that have been used in organizing. Organizer school also gives you an opportunity to discuss and debate your ideas with other organizers in the city!
 layout: default
 ---
 **Welcome to Organizer School 2026!** Organizer school is aimed at people who are interested in organizing or are already organizing and want to have a critical understanding of the theory, historical practice, strategies and tactics that have been used in organizing. Organizer school also gives you an opportunity to discuss and debate your ideas with other organizers in the city!
@@ -32,7 +28,6 @@ Every week, we will release session pages with all the materials you will need t
 * Week 2 (15 Oct) - **Toward a Science of Society** 
 
 
-
 #### Unit 2: Science & Production
 
 ***In the three weeks that follow (from week 3 to 6),*** we’ll dip our toes into political economy, the study of society’s system of production (i.e. its economy). In our brief overview, we’ll learn about the role of economic forces in the development of history, what these forces can tell us about what’s going on in the world today, and how to evaluate the material, economic interests of different social groups based on their role in the economy (i.e. the interests of different classes).
@@ -40,7 +35,6 @@ Every week, we will release session pages with all the materials you will need t
 * Week 3 (22 Oct) - **The Birth of the Capitalist Mode of Production**
 * Week 4 (29 Oct) - **The Capitalist Production & Accumulation Process**
 * Week 5 (5 Nov) - **Imperialism and the General Crises of Capitalism**
-
 
 
 #### Unit 3: Science & Class Struggle
