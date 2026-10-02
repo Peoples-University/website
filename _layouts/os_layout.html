@@ -11,8 +11,8 @@ layout: default
 </section>
 
 {% if page.books.size > 0 %}
-<h2 id="required-readings">Required readings</h2>
-<p class="reading-help">Use the PDF links to read or save a copy. Original online versions are also linked where available.</p>
+<h2 id="required-readings">Readings</h2>
+<p class="reading-help">Readings are required unless marked optional. Use the PDF links to read or save a copy. Original online versions are also linked where available.</p>
 <ul class="reading-list">
   {% for book in page.books %}
     {% include reading-resource.html book=book %}

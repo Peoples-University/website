@@ -12,6 +12,8 @@ collections:
 
 baseurl: "/website"
 timezone: America/Vancouver
+# Legacy event pages use their upcoming event date as Jekyll's date.
+future: true
 exclude:
   - Gemfile.preview
   - Gemfile.preview.lock

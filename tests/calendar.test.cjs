@@ -21,7 +21,7 @@ class Element {
 }
 const html = fs.readFileSync('_site/index.html', 'utf8');
 const dates = [...html.matchAll(/class="calendar-entry" data-event-date="([^"]+)"/g)].map(match => match[1]);
-assert.equal(dates.length, 18, 'All confirmed screenings and study sessions included');
+assert.equal(dates.length, 19, 'All confirmed screenings and study sessions included');
 assert.equal(dates.filter(date => date === '2026-10-08').length, 1, 'Course and session must not duplicate');
 assert(!dates.includes('2026-09-24'), 'Publication dates must not enter the calendar');
 assert(!dates.includes('2026-09-21'), 'Session publication date must not enter the calendar');
@@ -39,7 +39,7 @@ const document = { querySelectorAll: () => [calendar], createElement: tag => new
 vm.runInNewContext(fs.readFileSync('assets/js/calendar.js', 'utf8'), { document, Date: FixedDate, Intl });
 const visibleDates = () => entries.filter(entry => !entry.hidden).map(entry => entry.dataset.eventDate).sort();
 assert.equal(elements['.calendar-month'].textContent, 'October 2026');
-assert.deepEqual(visibleDates(), ['2026-10-04', '2026-10-08', '2026-10-15', '2026-10-18', '2026-10-22', '2026-10-29']);
+assert.deepEqual(visibleDates(), ['2026-10-04', '2026-10-08', '2026-10-15', '2026-10-16', '2026-10-18', '2026-10-22', '2026-10-29']);
 const table = elements['.calendar-month-view'].children[0];
 const cells = table.children.find(child => child.tag === 'tbody').children.flatMap(row => row.children);
 assert.equal(cells.filter(cell => cell.className === 'calendar-blank').length, 4);
@@ -62,7 +62,8 @@ assert.equal(leapCells.filter(cell => cell.children.length).length, 29);
 for (const [file, expected] of [
   ['_site/orgschool26/thinking-scientifically.html', '2026-10-08'],
   ['_site/studies/canadian-class-structure-discussion-writing-group.html', '2026-10-04'],
-  ['_site/events/cinema-struggle-how-to-blow-up-a-pipeline.html', '2026-09-04']
+  ['_site/events/cinema-struggle-how-to-blow-up-a-pipeline.html', '2026-09-04'],
+  ['_site/events/cinema-struggle-the-people-under-the-stairs.html', '2026-10-16']
 ]) {
   const page = fs.readFileSync(file, 'utf8');
   const meta = page.match(/<div class="article-meta">([\s\S]*?)<\/div>/)[1];
@@ -70,12 +71,17 @@ for (const [file, expected] of [
 }
 const cinema = fs.readFileSync('_site/cinema-and-struggle/index.html', 'utf8');
 assert(cinema.includes('class="cinema-theme"'));
-assert(cinema.includes('No upcoming screening has been announced'));
-assert.equal((cinema.match(/class="content-card/g) || []).length, 5);
+assert(cinema.includes('The People Under The Stairs'));
+assert.equal((cinema.match(/class="content-card/g) || []).length, 6);
+assert(html.includes('VPL Central Branch, Level 6 North (690) Meeting Room'));
+const school = fs.readFileSync('_site/orgschool26/thinking-scientifically.html', 'utf8');
+assert.equal((school.match(/class="resource-link"[^>]*>\[OPTIONAL\] Activist Study/g) || []).length, 1);
+assert(school.includes('2PACX-1vRojCS-TonINxh0dUw4wfylBsOI-HH-ckQdMqCll6yC1BshU_-LmyKkcps-obA3BcV_yalDPrQDUrgG'));
+assert(school.includes('theses/theses.pdf'));
 for (const page of [html, cinema]) {
   assert.equal((page.match(/<ul class="cinema-tasks">[\s\S]*?<\/ul>/)[0].match(/<li>/g) || []).length, 5);
   assert(page.includes('Other suggested ways to contribute'));
   assert(page.includes('peoplesuniversityproject@sfpirg.ca'));
 }
 console.log('Calendar: dates, navigation, empty months, leap year, Vancouver timezone and links passed.');
-console.log('Content: event headings, Cinema membership and five past screenings passed.');
+console.log('Content: event headings, Cinema membership, six screenings and latest main updates passed.');
