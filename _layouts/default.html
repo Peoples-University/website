@@ -1,122 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-    <link rel="icon" href="https://raw.githubusercontent.com/Peoples-University/website/refs/heads/main/assets/PUP%20Logo2.png">
-    <title>{{ page.title }} | The People's University Project</title>
-</head>
-
-<body>
-
-    <!-- =========== NAV ===========-->
-    <div class="container-fluid pt-3 pb-3 fixed-top navbar">
-
-        <div class="text-center">
-            <a href="{{ site.baseurl }}/" class="site-title-link">
-                <div class="site-title" style="color: white;">The People's University Project</div>
-            </a>
-
-            <div class="h4 mt-2 nav-buttons">
-                <a href="{{ site.baseurl }}/about" class="btn btn-primary nav-btn" role="button">ABOUT</a>
-                <a href="{{ site.baseurl }}/orgschool26" class="btn btn-primary nav-btn" role="button">ORGANIZER SCHOOL</a>
-                <a href="{{ site.baseurl }}/events" class="btn btn-primary nav-btn" role="button">EVENTS</a>
-                <a href="{{ site.baseurl }}/studies" class="btn btn-primary nav-btn" role="button">STUDIES</a>
-            </div>
-        </div>
-
-    </div>
-
-
+---
+layout: base
+---
+{% assign section_name = 'About the project' %}
+{% assign section_url = '/about.html' %}
+{% case page.collection %}
+  {% when 'articles' %}{% assign section_name = 'Journal' %}{% assign section_url = '/journal/' %}
+  {% when 'studies' %}{% assign section_name = 'Studies' %}{% assign section_url = '/studies/' %}
+  {% when 'projects' %}{% assign section_name = 'Projects' %}{% assign section_url = '/projects/' %}
+  {% when 'events' %}{% assign section_name = 'Events' %}{% assign section_url = '/events/' %}
+  {% when 'orgschool26' %}{% assign section_name = 'Organizer School' %}{% assign section_url = '/orgschool26/' %}
+{% endcase %}
+<article class="shell article-page">
+  <header class="article-header">
+    {% if page.collection %}<a class="back-link" href="{{ section_url | relative_url }}"><span aria-hidden="true">←</span> Back to {{ section_name }}</a>{% endif %}
+    <p class="eyebrow">{% if page.collection == 'orgschool26' and page.unit and page.week %}Organizer School · Unit {{ page.unit }} · Week {{ page.week }}{% else %}{{ page.kicker | default: section_name }}{% endif %}</p>
+    <h1>{{ page.display_title | default: page.title | escape }}</h1>
     {% if page.collection %}
-<div class="container mt-4">
-    <a href="{% case page.collection %}
-                {% when 'articles' %}/website/journal
-                {% when 'projects' %}/website/projects
-                {% when 'studies' %}/website/studies
-                {% when 'events' %}/website/events
-                {% when 'orgschool' %}/website/orgschool26
-             {% endcase %}"
-       class="btn btn-primary btn-sm">
-        Back to
-        {% case page.collection %}
-            {% when 'articles' %}Journal
-            {% when 'projects' %}Projects
-            {% when 'studies' %}Studies
-            {% when 'events' %}Events
-            {% when 'orgschool26' %}Organizer School
-        {% endcase %}
-    </a>
-</div>
-{% endif %}
-
-
-    <div class="container mt-3">
-        <div class="site-title pb-2">{{ page.title }}</div>
-            <p style="font-weight:bold">
-                Published {{ page.date | date: "%d %B %Y" }}
-                {% if page.author %} · By {{ page.author }}{% endif %}
-            </p>
-        </div>
-    
-    <!-- =========== PAGE CONTENT =========== -->
-     <div class="container mt-3">
-        {{ content }}
+    <div class="article-meta">
+      {% assign display_date = page.event_date | default: page.datestring %}
+      {% unless display_date %}{% unless page.collection == 'events' or page.collection == 'orgschool26' %}{% assign display_date = page.date %}{% endunless %}{% endunless %}
+      {% if display_date %}<time datetime="{{ display_date | date: '%Y-%m-%d' }}">{{ display_date | date: '%-d %B %Y' }}</time>{% elsif page.collection == 'events' %}<span>Date to be announced</span>{% endif %}
+      {% if page.time %}<span>{{ page.time | escape }} (Vancouver)</span>{% endif %}
+      {% if page.location %}<span>{{ page.location | escape }}</span>{% endif %}
+      {% if page.author %}<span>{{ page.author | escape }}</span>{% endif %}
     </div>
-
-<!-- =========== FOOTER =========== -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-top">
-
-            <div class="footer-logo">
-                <img src="https://raw.githubusercontent.com/Peoples-University/website/refs/heads/main/assets/PUP%20Logo2.png" alt="PUC Logo" class="footer-logo-img">
-                <div class="footer-title">The People's University Project</div>
-            </div>
-
-            <div class="footer-social">
-                <a href="https://www.instagram.com/peoplesuniversityproject/" target="_blank" rel="noopener" aria-label="Instagram" class="footer-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.24 2.22.4.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.35 1.05.4 2.22.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.8-.4 2.22-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.05.35-2.22.4-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.24-2.22-.4-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.35-1.05-.4-2.22C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.24-1.8.4-2.22.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.05-.35 2.22-.4C8.42 2.21 8.8 2.2 12 2.2zm0-2.2C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.39C1.35 2.68.94 3.35.63 4.14c-.3.76-.5 1.64-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.39 2.13.67.67 1.34 1.08 2.13 1.39.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.39.67-.67 1.08-1.34 1.39-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.31-.79-.72-1.46-1.39-2.13C21.32 1.35 20.65.94 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0z"/>
-                        <path d="M12 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4z"/>
-                        <circle cx="18.41" cy="5.59" r="1.44"/>
-                    </svg>
-                </a>
-                <a href="mailto:peoplesuniversity@sfpirg.ca" aria-label="Email" class="footer-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm19.4 2H2.6L12 12.6 21.4 6zM3 8.24V18h18V8.24l-8.42 6.16a1 1 0 0 1-1.16 0L3 8.24z"/>
-                    </svg>
-                </a>
-            </div>
-
-        </div>
-
-        <hr class="footer-divider">
-
-        <div class="footer-bottom">
-            <p>
-                &copy; {{ 'now' | date: "%Y" }} The People's University Project. Content is licensed under
-                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>
-                — free to use, share, and adapt with attribution and permission.
-            </p>
-        </div>
-    </div>
-</footer>
-
-
-<script>
-function adjustNavPadding() {
-    const nav = document.querySelector('.fixed-top');
-    const navHeight = nav.offsetHeight;
-    document.body.style.paddingTop = navHeight + 'px';
-}
-window.addEventListener('load', adjustNavPadding);
-window.addEventListener('resize', adjustNavPadding);
-</script>
-
-</body>
-</html>
+    {% endif %}
+  </header>
+  <div class="article-layout">
+    <aside class="article-sidebar">
+      <div class="sidebar-inner">
+        <nav class="on-this-page" aria-label="On this page" hidden>
+          <p class="eyebrow">On this page</p>
+          <ol></ol>
+        </nav>
+      </div>
+    </aside>
+    <div class="prose">{{ content }}</div>
+  </div>
+  {% if page.collection %}
+  <div class="article-end">
+    <span class="eyebrow">{{ section_name }}</span>
+    <a class="text-link" href="{{ section_url | relative_url }}">All {{ section_name }} <span aria-hidden="true">→</span></a>
+  </div>
+  {% endif %}
+</article>

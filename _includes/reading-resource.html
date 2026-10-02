@@ -1,0 +1,27 @@
+{% assign reading = include.book %}
+{% assign pdf_url = reading.reading_pdf | default: '' %}
+{% assign source_path = reading.reading_link | split: '?' | first | split: '#' | first | downcase %}
+{% assign extension = source_path | slice: -4, 4 %}
+{% if pdf_url == '' and extension == '.pdf' %}{% assign pdf_url = reading.reading_link %}{% endif %}
+{% assign reading_url = reading.reading_link %}
+{% assign format_label = 'Web text' %}
+{% if pdf_url != '' %}
+  {% assign reading_url = pdf_url %}
+  {% assign format_label = 'PDF' %}
+{% elsif reading.reading_link contains 'docs.google.com/document/' %}
+  {% assign format_label = 'Google Docs' %}
+{% endif %}
+<li class="reading-resource">
+  <span class="reading-file" aria-hidden="true">{% if pdf_url != '' %}PDF{% else %}TEXT{% endif %}</span>
+  <div class="reading-info">
+    <span class="resource-label">{{ format_label }}{% if reading.reading_pagecount %} · {{ reading.reading_pagecount }} pages{% endif %}</span>
+    <a class="resource-link" href="{{ reading_url | escape }}">{{ reading.reading_title | escape }}</a>
+    <p class="reading-author">{{ reading.reading_author | escape }}</p>
+    <div class="reading-actions">
+      <a class="reading-primary" href="{{ reading_url | escape }}">{% if pdf_url != '' %}Read / download PDF{% else %}Read online{% endif %}<span class="visually-hidden">: {{ reading.reading_title | escape }}</span></a>
+      {% if pdf_url != '' and pdf_url != reading.reading_link %}
+      <a href="{{ reading.reading_link | escape }}">{% if reading.reading_link contains 'docs.google.com' %}Google Docs version{% else %}Web version{% endif %}<span class="visually-hidden">: {{ reading.reading_title | escape }}</span></a>
+      {% endif %}
+    </div>
+  </div>
+</li>

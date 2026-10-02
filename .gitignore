@@ -1,10 +1,10 @@
-<<<<<<< HEAD
-_site/ 
-.jekyll-cache/ 
-.sass-cache/ 
-.bundle/ 
+_site/
+.jekyll-cache/
+.sass-cache/
+.bundle/
 vendor/
-=======
+.DS_Store
+
 # Logs
 logs
 *.log
@@ -148,4 +148,3 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
->>>>>>> a3b099825d89ad4fd5a8b5da6baad2d227e6f3cc

@@ -41,4 +41,10 @@ summary: >-
   Week 13 - Scientific Communication for the Working Class
 layout: default
 ---
-Handout: https://docs.google.com/document/d/1Ek5Z7UEnEKGtzUhIsYU6vdumtEzXC2x10-Pz0LR-vig/edit?usp=drive_link
+This week, Code Against the Machine introduces **descriptive statistics**. Our beginner-friendly course brings together coding, statistics and political economy to give organizers tools for studying Canada’s political economy and addressing concrete problems.
+
+## Study materials
+
+Use the session handout to follow along and review the material.
+
+[Read the Session 6 handout →](https://docs.google.com/document/d/1Ek5Z7UEnEKGtzUhIsYU6vdumtEzXC2x10-Pz0LR-vig/edit?usp=drive_link)

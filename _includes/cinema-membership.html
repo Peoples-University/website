@@ -1,0 +1,12 @@
+<p>{{ site.data.cinema.membership_note | escape }}</p>
+<ul class="cinema-tasks">
+  {% for task in site.data.cinema.tasks %}<li>{{ task | escape }}</li>{% endfor %}
+</ul>
+<details class="cinema-suggestions">
+  <summary>Other suggested ways to contribute</summary>
+  <ul>{% for suggestion in site.data.cinema.suggestions %}<li>{{ suggestion | escape }}</li>{% endfor %}</ul>
+</details>
+<div class="cinema-actions">
+  <a href="mailto:{{ site.data.cinema.email }}?subject=Cinema%20%26%20Struggle%20committee">Email to get involved ↗</a>
+  <a href="{{ site.data.cinema.source_url }}">Membership document ↗</a>
+</div>

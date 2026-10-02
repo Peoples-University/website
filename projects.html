@@ -1,47 +1,9 @@
 ---
-layout: blog
+layout: collection
 title: Projects
+intro: Investigations and ongoing work from the People's University Project.
+collection_key: projects
+empty_title: No projects published yet
+empty_copy: Project reports will be added here. Current readings and course materials are available under Studies.
 permalink: /projects/
 ---
-
-<div class="container mt-3">
-    {% assign all_projects = site.projects | sort: "date" | reverse %}
-
-    <div class="site-title mt-4 mb-4 text-center">Projects</div>
-
-    <div class="card-columns mb-5">
-        {% for project in all_projects %}
-        <div class ="mb-4" style="background-color: #FDD24F; border-radius:5px; break-inside: avoid;">
-
-            <div class="ml-3 mb-3">
-                <span style="width:fit-content; background-color: #2b569b; padding:10px; border-radius:5px; color: white;">
-                    PROJECT
-                </span>
-            </div>
-
-            <div class="card-title pl-4 pr-4"><a href="{{ project.url | relative_url }}" style="color:#2b569b;">{{ project.title }}</a></div>
-
-            <img src="{{ project.image }}" style="width:100%; aspect-ratio:2/1; object-fit:cover;">
-
-            <div class="p-3">
-                <p style="font-weight:bold">Published {{ project.date | date: "%d %B %Y" }}</p>
-
-                <div style="overflow:hidden;" class="mb-3">
-                    <div style="overflow:hidden; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:5; line-clamp: 5;">
-                        {{ project.summary }}
-                    </div>
-                </div>
-
-                <a target="_blank" href="{{ project.url | relative_url }}">
-                    <u class="h5" style="color:#2b569b">View project here</u>
-                </a>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-</div>
-
-<div class="container">
-    <div class="row justify-content-center"><span class="h2 justify-content-center">Projects coming soon!</span></div>
-    <div class="row"><img src="https://raw.githubusercontent.com/Peoples-University/website/refs/heads/main/assets/images/Project.png" style="width:100%"></div>
-</div>

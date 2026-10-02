@@ -3,6 +3,7 @@ title: Thinking Scientifically
 unit: 1
 week: 1
 datestring: 8 October 2026
+event_date: "2026-10-08"
 time: 6pm - 8pm
 slide_url: https://docs.google.com/presentation/d/e/2PACX-1vTs-AEegOAwbHgq8a-qV0dmKqL4TZRzq8aBbzasFNPgu8dHyxRJuIdxNsbaLRh_XIWaTubRtfvQ2dQu/pubembed?start=false&loop=false&delayms=3000
 author: People's University Committee
@@ -13,10 +14,12 @@ books:
     reading_author: the People’s University Project
     reading_pagecount: 25
     reading_link: https://docs.google.com/document/d/1-h1akz7yrysxJw0BmwvWWNLZqZYI97tkbmYSNtKK6rA/edit?tab=t.0
+    reading_pdf: https://docs.google.com/document/d/1-h1akz7yrysxJw0BmwvWWNLZqZYI97tkbmYSNtKK6rA/export?format=pdf
   - reading_title: Theses on Feuerbach
     reading_author: Karl Marx
     reading_pagecount: 3
     reading_link: https://www.marxists.org/archive/marx/works/1845/theses/theses.htm
+    reading_pdf: https://www.marxists.org/archive/marx/works/1845/theses/theses.pdf
   - reading_title: Activist Study (ARAK)
     reading_author: Communist Party of Philippines, Lesson 2
     reading_pagecount: 36

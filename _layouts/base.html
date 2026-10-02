@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3f1">
+  <meta name="description" content="{{ page.summary | default: page.intro | default: 'Collective study, political education, and organizing in Greater Vancouver. Explore the People’s University Project.' | strip_html | normalize_whitespace | escape }}">
+  <title>{% if page.title %}{{ page.title | escape }} | {% endif %}The People's University Project</title>
+  <link rel="icon" href="{{ '/assets/PUP%20Logo2.png' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/calendar.js' | relative_url }}" defer></script>
+</head>
+<body{% if page.theme == 'cinema' %} class="cinema-theme"{% endif %}>
+  {% include header.html %}
+  <main class="site-main" id="main-content" tabindex="-1">{{ content }}</main>
+  {% include footer.html %}
+</body>
+</html>

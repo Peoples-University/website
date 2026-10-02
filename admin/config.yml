@@ -20,6 +20,18 @@ collections:
           - { label: "Date", name: "date", widget: "datetime" }
           - { label: "Author", name: "author", widget: "string", default: "People's University Committee"}
           - { label: "Body", name: "body", widget: "markdown" }
+      - name: "cinema"
+        label: "Cinema & Struggle membership"
+        file: "_data/cinema.yml"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Introduction", name: "intro", widget: "text" }
+          - { label: "Membership note", name: "membership_note", widget: "text" }
+          - { label: "Tentative tasks", name: "tasks", widget: "list", field: { label: "Task", name: "task", widget: "string" } }
+          - { label: "Suggested tasks", name: "suggestions", widget: "list", field: { label: "Suggestion", name: "suggestion", widget: "text" } }
+          - { label: "Membership document", name: "source_url", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Instagram", name: "instagram", widget: "string" }
 
   - name: "journal-articles"
     label: "Journal Articles"
@@ -59,6 +71,17 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "First meeting date", name: "event_date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: false, hint: "Actual meeting date, not publication date. Adds this study to the calendar." }
+      - { label: "Time", name: "time", widget: "string", required: false }
+      - { label: "Location", name: "location", widget: "string", required: false }
+      - { label: "Start date has its own session page", name: "calendar_hide_start", widget: "boolean", default: false, required: false, hint: "Prevents duplicate calendar entries." }
+      - label: "Additional confirmed meetings"
+        name: "sessions"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Meeting date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+          - { label: "Session title", name: "title", widget: "string", required: false }
       - { label: "Author", name: "author", widget: "string", default: "People's University Committee"}
       - { label: "Tags", name: "tags", widget: "list", required: false }
       - { label: "Image", name: "image", widget: "image", required: false }
@@ -75,7 +98,8 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Unit", name: "unit", widget: "number" }
       - { label: "Week", name: "week", widget: "number" }
-      - { label: "Date", name: "datestring", widget: "string", hint: "eg: 23 December 1999" }
+      - { label: "Session date", name: "event_date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", hint: "Actual session date, used in the calendar and page heading." }
+      - { label: "Legacy date text", name: "datestring", widget: "string", required: false }
       - { label: "Time", name: "time", widget: "string", hint: "Eg: 1pm - 6pm" }
       - { label: "Slide URL", name: "slide_url", widget: "string", hint: "URL to the presentation slides" }
       - { label: "Author", name: "author", widget: "string", default: "People's University Committee"}
@@ -91,21 +115,24 @@ collections:
           - { label: "Reading Author", name: "reading_author", widget: "string" }
           - { label: "Reading Page Count", name: "reading_pagecount", widget: "number" }
           - { label: "Reading Link", name: "reading_link", widget: "string" }
+          - { label: "PDF Link (optional)", name: "reading_pdf", widget: "string", required: false, hint: "Direct PDF URL. Keep Reading Link for the original online text. Links ending in .pdf are detected automatically." }
       - { label: "Summary", name: "summary", widget: "markdown" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "os_layout" }
 
   - name: "events"
-    label: "Past Events"
+    label: "Events & screenings"
     folder: "_events"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "string", hint: "Format as DD-MM-YYY" }
+      - { label: "Publication / legacy date", name: "date", widget: "string", required: false, hint: "Not used for the calendar or public event date." }
+      - { label: "Event date", name: "event_date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", hint: "Actual event date, not the date you publish the page." }
+      - { label: "Series", name: "series", widget: "select", options: [{ label: "Other event", value: "other" }, { label: "Cinema & Struggle", value: "cinema" }], default: "other" }
       - { label: "Time", name: "time", widget: "string", hint: "Eg: 1pm - 6pm" }
       - { label: "Location", name: "location", widget: "string" }
-      - { label: "Calendar Link", name: "calendarlink", widget: "string" }
-      - { label: "Registration Link", name: "registerlink", widget: "string" }
+      - { label: "Calendar Link", name: "calendarlink", widget: "string", required: false }
+      - { label: "Registration Link", name: "registerlink", widget: "string", required: false }
       - { label: "Author", name: "author", widget: "string", default: "People's University Committee"}
       - { label: "Tags", name: "tags", widget: "list", required: false }
       - { label: "Image", name: "image", widget: "string" }

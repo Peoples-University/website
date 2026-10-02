@@ -1,0 +1,57 @@
+---
+layout: base
+title: Cinema & Struggle
+theme: cinema
+permalink: /cinema-and-struggle/
+intro: Film screenings, political discussion, and the Cinema & Struggle committee.
+---
+<div class="shell cinema-page">
+  <header class="cinema-hero">
+    <div>
+      <p class="cinema-kicker">The People’s University Project presents</p>
+      <h1>Cinema <span>&</span><br>Struggle</h1>
+      <p class="cinema-deck">{{ site.data.cinema.intro }}</p>
+      <nav class="cinema-actions" aria-label="Cinema & Struggle sections">
+        <a href="#cinema-membership">Join the committee</a>
+        <a href="#screenings">Screenings</a>
+      </nav>
+    </div>
+    <img src="{{ '/assets/images/CS_Recruitment.jpg' | relative_url }}" alt="Cinema & Struggle committee recruitment poster: choose films and create discussion questions. Contact links and committee tasks are provided below." width="1080" height="1350">
+  </header>
+  <section class="cinema-goals" aria-labelledby="cinema-goals-title">
+    <h2 id="cinema-goals-title">Why we meet</h2>
+    <div class="cinema-goals-grid">
+      <div><h3>Community & culture</h3><p>A regular space to meet one another and enjoy films collectively, building relationships and a culture of discussion outside formal political spaces.</p></div>
+      <div><h3>Political discussion</h3><p>Different interpretations, disagreements and political questions are part of the discussion. Talking them through can help us sharpen our ideas and learn from one another.</p></div>
+      <div><h3>A wider audience</h3><p>Films people want to see, affordable tickets and a welcoming atmosphere can bring people together whether or not they are already politically involved.</p></div>
+    </div>
+  </section>
+  <section class="cinema-membership" id="cinema-membership" aria-labelledby="cinema-membership-title">
+    <h2 id="cinema-membership-title">Get involved in the committee</h2>
+    <p>Interested in cinema and political discussion? Help shape what we watch and how we discuss it.</p>
+    {% include cinema-membership.html %}
+    <p>You can also <a href="{{ site.data.cinema.instagram }}">message us on Instagram ↗</a>.</p>
+  </section>
+  <section id="screenings" class="cinema-screenings" aria-labelledby="screenings-title">
+    <h2 id="screenings-title">Screenings</h2>
+    {% assign screenings = site.events | where: 'series', 'cinema' | sort: 'event_date' %}
+    {% assign today = site.time | date: '%Y%m%d' | plus: 0 %}
+    {% assign upcoming_count = 0 %}
+    <h3>Coming up</h3>
+    <div class="card-grid">
+      {% for screening in screenings %}
+        {% assign screening_day = screening.event_date | date: '%Y%m%d' | plus: 0 %}
+        {% if screening_day >= today %}{% assign upcoming_count = upcoming_count | plus: 1 %}{% include content-card.html post=screening %}{% endif %}
+      {% endfor %}
+    </div>
+    {% if upcoming_count == 0 %}<p>No upcoming screening has been announced on the website yet. <a href="{{ '/events/' | relative_url }}">See the calendar for other events →</a></p>{% endif %}
+    <h3>Previous screenings</h3>
+    <div class="card-grid">
+      {% assign screenings = screenings | reverse %}
+      {% for screening in screenings %}
+        {% assign screening_day = screening.event_date | date: '%Y%m%d' | plus: 0 %}
+        {% if screening_day < today %}{% include content-card.html post=screening %}{% endif %}
+      {% endfor %}
+    </div>
+  </section>
+</div>

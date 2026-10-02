@@ -1,6 +1,29 @@
 ---
 title: Organizer School (Fall 2026)
 date: 2026-09-24T13:00:00.000-07:00
+event_date: "2026-10-08"
+calendar_hide_start: true
+time: 6pm - 8pm
+location: SFU Harbour Centre Room 2200
+sessions:
+  - date: "2026-10-15"
+    title: "Organizer School: Toward a Science of Society"
+  - date: "2026-10-22"
+    title: "Organizer School: The Birth of the Capitalist Mode of Production"
+  - date: "2026-10-29"
+    title: "Organizer School: The Capitalist Production & Accumulation Process"
+  - date: "2026-11-05"
+    title: "Organizer School: Imperialism and the General Crises of Capitalism"
+  - date: "2026-11-12"
+    title: "Organizer School: Do You Have Class (In Your Analysis)?"
+  - date: "2026-11-19"
+    title: "Organizer School: The Battle of the Classes"
+  - date: "2026-11-26"
+    title: "Organizer School: Movement Leadership"
+  - date: "2026-12-03"
+    title: "Organizer School: Organizing the People / Unity & Struggle"
+  - date: "2026-12-10"
+    title: "Organizer School: Raising Consciousness"
 author: People's University Committee
 image: /website/assets/images/organizerschool.png
 summary: Welcome to Organizer School 2026! Organizer school is aimed at people

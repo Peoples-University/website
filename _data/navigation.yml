@@ -1,0 +1,21 @@
+- title: About
+  url: /about.html
+  section: about
+- title: Journal
+  url: /journal/
+  section: articles
+- title: Studies
+  url: /studies/
+  section: studies
+- title: Calendar
+  url: /events/
+  section: events
+- title: Cinema & Struggle
+  url: /cinema-and-struggle/
+  section: cinema
+- title: Projects
+  url: /projects/
+  section: projects
+- title: Organizer School
+  url: /orgschool26/
+  section: orgschool26

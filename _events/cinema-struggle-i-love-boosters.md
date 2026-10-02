@@ -1,6 +1,8 @@
 ---
 title: "Cinema & Struggle: I Love Boosters"
 date: 07-08-2026
+event_date: "2026-08-07"
+series: cinema
 time: 6pm - 9pm
 location: SFU Harbour Centre, Fletcher Challenge Theatre
 calendarlink: "##"

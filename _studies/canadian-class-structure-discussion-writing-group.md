@@ -1,6 +1,12 @@
 ---
 title: Canadian Class Structure - Discussion + Writing Group
 date: 2026-09-24T12:00:00.000-07:00
+event_date: "2026-10-04"
+time: 11am - 1pm
+location: VPL Central Branch
+sessions:
+  - date: "2026-10-18"
+  - date: "2026-11-01"
 author: People's University Committee
 image: /website/assets/images/heading-4-.png
 summary: What is class, and who makes up the different classes in Canada? This

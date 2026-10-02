@@ -1,0 +1,41 @@
+{% assign card_post = include.post %}
+{% assign card_heading = include.heading | default: 'h3' %}
+{% assign card_label = 'Read more' %}
+{% assign card_date = card_post.event_date | default: card_post.datestring %}
+{% unless card_date %}{% unless card_post.collection == 'events' or card_post.collection == 'orgschool26' %}{% assign card_date = card_post.date %}{% endunless %}{% endunless %}
+{% assign card_type = 'From the project' %}
+{% case card_post.collection %}
+  {% when 'articles' %}{% assign card_type = 'Journal' %}{% assign card_label = 'Read article' %}
+  {% when 'projects' %}{% assign card_type = 'Project' %}{% assign card_label = 'Project details' %}
+  {% when 'studies' %}{% assign card_type = 'Study' %}{% assign card_label = 'Study materials' %}
+  {% when 'orgschool26' %}{% assign card_type = 'Organizer School' %}{% assign card_label = 'View session' %}
+  {% when 'events' %}
+    {% assign card_day = card_date | date: '%Y%m%d' | plus: 0 %}
+    {% assign current_day = site.time | date: '%Y%m%d' | plus: 0 %}
+    {% if card_day >= current_day %}{% assign card_type = 'Upcoming event' %}{% else %}{% assign card_type = 'Past event' %}{% endif %}
+    {% assign card_label = 'Event details' %}
+{% endcase %}
+<article class="content-card{% unless card_post.image and card_post.image != '' %} content-card--text{% endunless %}">
+  {% if card_post.image and card_post.image != '' %}
+    {% assign card_image = card_post.image %}
+    {% unless card_image contains '://' %}
+      {% assign card_image_prefix = card_image | slice: 0, site.baseurl.size %}
+      {% if site.baseurl != '' and card_image_prefix == site.baseurl %}
+        {% assign card_image = card_image | remove_first: site.baseurl %}
+      {% endif %}
+      {% assign card_image = card_image | relative_url %}
+    {% endunless %}
+  <a class="card-media" href="{{ card_post.url | relative_url }}" tabindex="-1" aria-hidden="true">
+    <img class="card-image" src="{{ card_image | escape }}" alt="" loading="lazy" width="640" height="400">
+  </a>
+  {% endif %}
+  <div class="card-body">
+    <div class="card-meta">
+      <span class="tag">{{ card_type }}</span>
+      {% if card_date %}<time datetime="{{ card_date | date: '%Y-%m-%d' }}">{{ card_date | date: '%-d %b %Y' }}</time>{% elsif card_post.collection == 'events' %}<span>Date to be announced</span>{% endif %}
+    </div>
+    <{{ card_heading }} class="card-title"><a href="{{ card_post.url | relative_url }}">{{ card_post.display_title | default: card_post.title | escape }}</a></{{ card_heading }}>
+    {% if card_post.summary %}<p class="card-summary">{{ card_post.summary | strip_html | truncate: 180 }}</p>{% endif %}
+    <a class="card-link" href="{{ card_post.url | relative_url }}">{{ card_label }}<span class="visually-hidden">: {{ card_post.title | escape }}</span></a>
+  </div>
+</article>

@@ -1,0 +1,30 @@
+<section class="event-calendar" aria-label="Events calendar">
+  <p class="calendar-note">Screenings, study groups and Organizer School. Times are in Vancouver (Pacific time).</p>
+  <div class="calendar-controls" hidden>
+    <button type="button" data-month-step="-1" aria-label="Previous month">←</button>
+    <h3 class="calendar-month" aria-live="polite" aria-atomic="true"></h3>
+    <button type="button" data-month-step="1" aria-label="Next month">→</button>
+    <button type="button" data-calendar-today>This month</button>
+  </div>
+  <div class="calendar-layout">
+    <div class="calendar-month-view" hidden></div>
+    <div class="calendar-agenda">
+      <h3>Schedule</h3>
+      <p class="calendar-empty" hidden>No events listed for this month. Check another month or the shared calendar.</p>
+      <ul class="calendar-event-list">
+        {% assign calendar_posts = site.events | concat: site.orgschool26 | concat: site.studies %}
+        {% for entry in calendar_posts %}
+          {% if entry.event_date and entry.calendar_hide_start != true %}
+            {% include calendar-entry.html entry=entry day=entry.event_date title=entry.title %}
+          {% endif %}
+          {% for session in entry.sessions %}
+            {% assign session_title = session.title | default: entry.title %}
+            {% include calendar-entry.html entry=entry day=session.date title=session_title %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <p class="calendar-note"><a class="text-link" href="https://calendar.google.com/calendar/u/0/r?cid=c_8768494cf684804217c5a373541ee84838b7bd31a8c71d355cc0381602d349f7%40group.calendar.google.com">Open shared Google Calendar ↗</a></p>
+  <noscript><p>The full schedule is listed above. Enable JavaScript for month-by-month browsing.</p></noscript>
+</section>

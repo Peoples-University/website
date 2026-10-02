@@ -11,3 +11,11 @@ collections:
     output: true
 
 baseurl: "/website"
+timezone: America/Vancouver
+exclude:
+  - Gemfile.preview
+  - Gemfile.preview.lock
+  - scripts
+  - tests
+  - README.md
+  - vendor

@@ -1,0 +1,22 @@
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="The People's University Project home">
+      <img class="brand-logo" src="{{ '/assets/PUP%20Logo2.png' | relative_url }}" alt="" width="46" height="46">
+      <span class="brand-name">The People's<br>University Project</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      {% for item in site.data.navigation %}
+        <a href="{{ item.url | relative_url }}" class="nav-link"{% if page.collection == item.section or page.collection_key == item.section or page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+    <details class="mobile-menu">
+      <summary>Menu <span aria-hidden="true">☰</span></summary>
+      <nav aria-label="Mobile navigation">
+        {% for item in site.data.navigation %}
+          <a href="{{ item.url | relative_url }}"{% if page.collection == item.section or page.collection_key == item.section or page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+        {% endfor %}
+      </nav>
+    </details>
+  </div>
+</header>

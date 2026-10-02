@@ -11,6 +11,8 @@ summary: No Other Choice is a 2025 South Korean black comedy thriller film
 layout: default
 title: "Cinema & Struggle: No Other Choice"
 date: 03-07-2026
+event_date: "2026-07-03"
+series: cinema
 time: 6 - 9pm
 location: SFU Harbour Centre, Fletcher Challenge Theatre
 calendarlink: "##"
