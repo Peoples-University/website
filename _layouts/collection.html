@@ -31,4 +31,13 @@ layout: base
     </div>
     {% endif %}
   </section>
+  {% if page.course_overview %}
+    {% assign course_overview = site.studies | where: 'slug', page.course_overview | first %}
+    {% if course_overview %}
+    <section class="section prose course-overview" aria-labelledby="course-overview-heading">
+      <h2 id="course-overview-heading">Course overview &amp; syllabus</h2>
+      {{ course_overview.content | markdownify }}
+    </section>
+    {% endif %}
+  {% endif %}
 </div>

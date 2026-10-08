@@ -19,9 +19,24 @@
     <p class="reading-author">{{ reading.reading_author | escape }}</p>
     <div class="reading-actions">
       <a class="reading-primary" href="{{ reading_url | escape }}">{% if pdf_url != '' %}Read / download PDF{% else %}Read online{% endif %}<span class="visually-hidden">: {{ reading.reading_title | escape }}</span></a>
-      {% if pdf_url != '' and pdf_url != reading.reading_link %}
-      <a href="{{ reading.reading_link | escape }}">{% if reading.reading_link contains 'docs.google.com' %}Google Docs version{% else %}Web version{% endif %}<span class="visually-hidden">: {{ reading.reading_title | escape }}</span></a>
+      {% if reading.reading_link and reading.reading_link != '' and pdf_url != '' and pdf_url != reading.reading_link %}
+      <a href="{{ reading.reading_link | escape }}">{% if reading.reading_link_label %}{{ reading.reading_link_label | escape }}{% elsif reading.reading_link contains 'docs.google.com' %}Google Docs version{% else %}Web version{% endif %}<span class="visually-hidden">: {{ reading.reading_title | escape }}</span></a>
+      {% endif %}
+      {% if reading.reading_audio and reading.reading_audio != '' %}
+      <a href="{{ reading.reading_audio | escape }}">Listen / download audio<span class="visually-hidden">: {{ reading.reading_title | escape }}</span></a>
       {% endif %}
     </div>
+    {% if reading.reading_audio and reading.reading_audio != '' %}
+    <details class="reading-audio">
+      <summary>Listen here<span class="visually-hidden">: {{ reading.reading_title | escape }}</span></summary>
+      {% if reading.reading_audio contains 'https://drive.google.com/file/d/' %}
+        {% assign audio_id = reading.reading_audio | split: '/d/' | last | split: '/' | first %}
+        <iframe src="https://drive.google.com/file/d/{{ audio_id | escape }}/preview" title="Audio: {{ reading.reading_title | escape }}" loading="lazy" allow="autoplay"></iframe>
+      {% else %}
+        <audio controls preload="none" src="{{ reading.reading_audio | escape }}" aria-label="Audio: {{ reading.reading_title | escape }}">Your browser does not support the audio player. Use the audio link above.</audio>
+      {% endif %}
+    </details>
+    {% endif %}
+    {% if reading.reading_audio_note %}<p class="helper-text reading-audio-note">{{ reading.reading_audio_note | escape }}</p>{% endif %}
   </div>
 </li>

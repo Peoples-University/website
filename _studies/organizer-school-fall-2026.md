@@ -6,8 +6,6 @@ calendar_hide_start: true
 time: 6pm - 8pm
 location: SFU Harbour Centre Room 2200
 sessions:
-  - date: "2026-10-15"
-    title: "Organizer School: Toward a Science of Society"
   - date: "2026-10-22"
     title: "Organizer School: The Birth of the Capitalist Mode of Production"
   - date: "2026-10-29"
@@ -36,13 +34,13 @@ layout: default
 ---
 **Welcome to Organizer School 2026!** Organizer school is aimed at people who are interested in organizing or are already organizing and want to have a critical understanding of the theory, historical practice, strategies and tactics that have been used in organizing. Organizer school also gives you an opportunity to discuss and debate your ideas with other organizers in the city!
 
-We will be **meeting every week** for discussion sessions at **SFU Downtown**. 
+We will be **meeting every week** for discussion sessions. **All sessions will take place at SFU Harbour Centre, Rm 2200.**
 
 Every week, we will release session pages with all the materials you will need to prepare for sessions, including slides and readings. Access all session pages in the [Organizer School Landing Page](https://peoples-university.github.io/website/orgschool26) or through this syllabus page, which will be updated weekly. 
 
 **Discussion Group Details** \
 📆 **Every Thursday** starting 8 October 2026 \
-⏰ 6-8pm ([Add to calendar](https://calendar.google.com/calendar/u/0/r?cid=c_8768494cf684804217c5a373541ee84838b7bd31a8c71d355cc0381602d349f7%40group.calendar.google.com)) \
+⏰ 6-8pm ([Add to calendar](https://calendar.google.com/calendar/u/2?cid=Y18zNjk5MGI1MzRmNGU2MDVhNWRkZDg2ODQ0MWUxYTA4YjQxOTU5NDgxZWEzZmJkY2Y2ZTBhNTRiNDU4MjEwNjllQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20)) \
 📍 **SFU Harbour Centre Room 2200** 
 
  ***
@@ -54,7 +52,7 @@ Every week, we will release session pages with all the materials you will need t
 ***In the first two weeks,***  we’ll be learning about science and how to study society scientifically. In particular, we’ll be exploring a bit of “theory” and developing our ability to differentiate between theoretical frameworks (scientific vs. un-scientific) and understand what kinds of political and organizational practices correspond to each of the frameworks. 
 
 * Week 1 (8 Oct) - **[Thinking Scientifically](https://peoples-university.github.io/website/orgschool26/thinking-scientifically.html)**
-* Week 2 (15 Oct) - **Toward a Science of Society** 
+* Week 2 (15 Oct) - **[Toward a Science of Society]({{ '/orgschool26/toward-a-science-of-society.html' | relative_url }})**
 
 #### Unit 2: Science & Production
 

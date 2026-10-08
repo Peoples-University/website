@@ -23,6 +23,7 @@ const html = fs.readFileSync('_site/index.html', 'utf8');
 const dates = [...html.matchAll(/class="calendar-entry" data-event-date="([^"]+)"/g)].map(match => match[1]);
 assert.equal(dates.length, 19, 'All confirmed screenings and study sessions included');
 assert.equal(dates.filter(date => date === '2026-10-08').length, 1, 'Course and session must not duplicate');
+assert.equal(dates.filter(date => date === '2026-10-15').length, 1, 'Week 2 must replace its syllabus calendar placeholder');
 assert(!dates.includes('2026-09-24'), 'Publication dates must not enter the calendar');
 assert(!dates.includes('2026-09-21'), 'Session publication date must not enter the calendar');
 const entries = dates.map(date => { const entry = new Element('li'); entry.dataset.eventDate = date; return entry; });
@@ -61,6 +62,7 @@ const leapCells = leapTable.children.find(child => child.tag === 'tbody').childr
 assert.equal(leapCells.filter(cell => cell.children.length).length, 29);
 for (const [file, expected] of [
   ['_site/orgschool26/thinking-scientifically.html', '2026-10-08'],
+  ['_site/orgschool26/toward-a-science-of-society.html', '2026-10-15'],
   ['_site/studies/canadian-class-structure-discussion-writing-group.html', '2026-10-04'],
   ['_site/events/cinema-struggle-how-to-blow-up-a-pipeline.html', '2026-09-04'],
   ['_site/events/cinema-struggle-the-people-under-the-stairs.html', '2026-10-16']
@@ -78,6 +80,21 @@ const school = fs.readFileSync('_site/orgschool26/thinking-scientifically.html',
 assert.equal((school.match(/class="resource-link"[^>]*>\[OPTIONAL\] Activist Study/g) || []).length, 1);
 assert(school.includes('2PACX-1vRojCS-TonINxh0dUw4wfylBsOI-HH-ckQdMqCll6yC1BshU_-LmyKkcps-obA3BcV_yalDPrQDUrgG'));
 assert(school.includes('theses/theses.pdf'));
+const week2 = fs.readFileSync('_site/orgschool26/toward-a-science-of-society.html', 'utf8');
+assert.equal((week2.match(/class="reading-resource"/g) || []).length, 5);
+assert.equal((week2.match(/class="reading-audio"/g) || []).length, 4);
+assert.equal((week2.match(/>Web version/g) || []).length, 4);
+assert(!week2.includes('href=""'), 'Missing web versions must not generate empty links');
+assert(week2.includes('Audio not yet available'));
+assert(week2.includes('1LVkicBoXKOPa8u0NHNVZYEfgIa-Zr9vAozG4Jq4o5SM/embed'));
+assert(week2.includes('1J9glLQMwqeDDd__wSBSfHwIjOFkyCtc2aRW3UPHoqvE/export?format=pdf'));
+assert(fs.readFileSync('_site/studies/organizer-school-fall-2026.html', 'utf8').includes('/website/orgschool26/toward-a-science-of-society.html'));
+const schoolLanding = fs.readFileSync('_site/orgschool26/index.html', 'utf8');
+assert(schoolLanding.includes('Course overview &amp; syllabus'));
+assert(schoolLanding.indexOf('course-overview-heading') > schoolLanding.lastIndexOf('class="content-card'), 'Course overview must follow all session cards');
+assert(schoolLanding.includes('Week 10 (10 Dec)'));
+assert(schoolLanding.includes('SFU Harbour Centre Room 2200'));
+assert(schoolLanding.includes('/website/orgschool26/toward-a-science-of-society.html'));
 for (const page of [html, cinema]) {
   assert.equal((page.match(/<ul class="cinema-tasks">[\s\S]*?<\/ul>/)[0].match(/<li>/g) || []).length, 5);
   assert(page.includes('Other suggested ways to contribute'));

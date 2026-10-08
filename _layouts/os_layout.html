@@ -7,7 +7,7 @@ layout: default
   <h2 id="discussion-details">Discussion details</h2>
   <p><strong>{{ page.event_date | default: page.datestring | date: '%-d %B %Y' }}</strong>{% if page.time %} · {{ page.time | escape }}{% endif %}</p>
   {% if page.location %}<p>{{ page.location | escape }}</p>{% endif %}
-  <p><a href="https://calendar.google.com/calendar/u/0/r?cid=c_8768494cf684804217c5a373541ee84838b7bd31a8c71d355cc0381602d349f7%40group.calendar.google.com">Course calendar</a> · <a href="{{ '/studies/organizer-school-fall-2026.html' | relative_url }}">Course syllabus</a></p>
+  <p><a href="https://calendar.google.com/calendar/u/2?cid=Y18zNjk5MGI1MzRmNGU2MDVhNWRkZDg2ODQ0MWUxYTA4YjQxOTU5NDgxZWEzZmJkY2Y2ZTBhNTRiNDU4MjEwNjllQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20">Course calendar</a> · <a href="{{ '/studies/organizer-school-fall-2026.html' | relative_url }}">Course syllabus</a></p>
 </section>
 
 {% if page.books.size > 0 %}
@@ -23,7 +23,7 @@ layout: default
 {% if page.slide_url and page.slide_url != '' %}
 <h2 id="session-slides">Session slides</h2>
 <div class="slide-actions">
-  <a class="button button-secondary" href="{{ page.slide_url | replace: '/pubembed', '/pub' | escape }}" target="_blank" rel="noopener">Open presentation ↗</a>
+  <a class="button button-secondary" href="{{ page.slide_url | replace: '/pubembed', '/pub' | replace: '/embed', '/edit' | escape }}" target="_blank" rel="noopener">Open presentation ↗</a>
   <p class="helper-text">Open in a new tab for a larger view.</p>
 </div>
 <iframe class="embedslides" title="{{ page.title | escape }} — session slides" src="{{ page.slide_url | escape }}" loading="lazy" allowfullscreen></iframe>

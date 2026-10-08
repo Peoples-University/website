@@ -5,7 +5,7 @@ event_date: "2026-10-16"
 series: cinema
 time: 6pm-9pm
 location: Rennie Hall, Emily Carr University, 520E 1st Ave
-calendarlink: https://calendar.google.com/calendar/embed?src=c_8768494cf684804217c5a373541ee84838b7bd31a8c71d355cc0381602d349f7%40group.calendar.google.com&ctz=America%2FVancouver
+calendarlink: https://calendar.google.com/calendar/u/2?cid=Y18zNjk5MGI1MzRmNGU2MDVhNWRkZDg2ODQ0MWUxYTA4YjQxOTU5NDgxZWEzZmJkY2Y2ZTBhNTRiNDU4MjEwNjllQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20
 registerlink: https://www.eventbrite.ca/e/cinema-struggle-tickets-1986849327824
 author: People's University Committee
 tags: []
