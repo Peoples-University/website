@@ -17,11 +17,12 @@ layout: base
     <h1>{{ page.display_title | default: page.title | escape }}</h1>
     {% if page.collection %}
     <div class="article-meta">
-      {% assign display_date = page.event_date | default: page.datestring %}
+      {% include meeting-data.html entry=page %}
+      {% assign display_date = meeting_date %}
       {% unless display_date %}{% unless page.collection == 'events' or page.collection == 'orgschool26' %}{% assign display_date = page.date %}{% endunless %}{% endunless %}
       {% if display_date %}<time datetime="{{ display_date | date: '%Y-%m-%d' }}">{{ display_date | date: '%-d %B %Y' }}</time>{% elsif page.collection == 'events' %}<span>Date to be announced</span>{% endif %}
-      {% if page.time %}<span>{{ page.time | escape }} (Vancouver)</span>{% endif %}
-      {% if page.location %}<span>{{ page.location | escape }}</span>{% endif %}
+      {% if meeting_time %}<span>{{ meeting_time | escape }} (Vancouver)</span>{% endif %}
+      {% if meeting_location %}<span>{{ meeting_location | escape }}</span>{% endif %}
       {% if page.author %}<span>{{ page.author | escape }}</span>{% endif %}
     </div>
     {% endif %}
@@ -35,7 +36,15 @@ layout: base
         </nav>
       </div>
     </aside>
-    <div class="prose">{{ content }}</div>
+    <div class="prose">
+      {% if page.collection == 'events' %}
+        {% if page.image %}<img src="{{ page.image | escape }}" alt="{{ page.image_alt | default: page.title | escape }}" loading="lazy">{% endif %}
+        {% if page.registerlink and page.registerlink != '##' %}<p><a class="button" href="{{ page.registerlink | escape }}">Registration / tickets ↗</a></p>{% endif %}
+      {% endif %}
+      {{ content }}
+      {% assign trimmed_content = content | strip %}
+      {% if page.collection == 'events' and trimmed_content == '' %}{{ page.summary | markdownify }}{% endif %}
+    </div>
   </div>
   {% if page.collection %}
   <div class="article-end">

@@ -1,0 +1,23 @@
+---
+layout: null
+---
+[
+{% assign promotion_events = site.events | concat: site.orgschool26 | sort: 'event_date' %}
+{% for event in promotion_events %}
+{
+  "id": {{ event.url | jsonify }},
+  "title": {{ event.title | jsonify }},
+  "date": {{ event.event_date | date: '%Y-%m-%d' | jsonify }},
+  "time": {{ event.time | jsonify }},
+  "location": {{ event.location | jsonify }},
+  "summary": {{ event.summary | markdownify | strip_html | strip | jsonify }},
+  "image": {{ event.image | jsonify }},
+  "url": {{ event.url | relative_url | jsonify }},
+  "registration": {{ event.registerlink | jsonify }},
+  "series": {{ event.series | default: event.collection | jsonify }},
+  "readings": {{ event.books | jsonify }},
+  "slides": {{ event.slide_url | jsonify }},
+  "promotion": {{ event.promotion | jsonify }}
+}{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]

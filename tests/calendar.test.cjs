@@ -75,7 +75,8 @@ assert(cinema.includes('The People Under The Stairs'));
 assert.equal((cinema.match(/class="content-card/g) || []).length, 6);
 assert(html.includes('VPL Central Branch, Level 6 North (690) Meeting Room'));
 const school = fs.readFileSync('_site/orgschool26/thinking-scientifically.html', 'utf8');
-assert.equal((school.match(/class="resource-link"[^>]*>\[OPTIONAL\] Activist Study/g) || []).length, 1);
+assert.equal((school.match(/class="resource-link"[^>]*>Activist Study/g) || []).length, 1);
+assert(school.includes('Optional · PDF'));
 assert(school.includes('2PACX-1vRojCS-TonINxh0dUw4wfylBsOI-HH-ckQdMqCll6yC1BshU_-LmyKkcps-obA3BcV_yalDPrQDUrgG'));
 assert(school.includes('theses/theses.pdf'));
 for (const page of [html, cinema]) {

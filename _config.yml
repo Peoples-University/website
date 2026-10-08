@@ -15,6 +15,8 @@ timezone: America/Vancouver
 # Legacy event pages use their upcoming event date as Jekyll's date.
 future: true
 exclude:
+  - client_secret_140083137262-7q8vdpo9k6od6roqa818atfvh6coi8h3.apps.googleusercontent.com.json
+  - .promotion
   - Gemfile.preview
   - Gemfile.preview.lock
   - scripts

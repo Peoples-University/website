@@ -1,7 +1,8 @@
 {% assign card_post = include.post %}
 {% assign card_heading = include.heading | default: 'h3' %}
 {% assign card_label = 'Read more' %}
-{% assign card_date = card_post.event_date | default: card_post.datestring %}
+{% include meeting-data.html entry=card_post %}
+{% assign card_date = meeting_date %}
 {% unless card_date %}{% unless card_post.collection == 'events' or card_post.collection == 'orgschool26' %}{% assign card_date = card_post.date %}{% endunless %}{% endunless %}
 {% assign card_type = 'From the project' %}
 {% case card_post.collection %}

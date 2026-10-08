@@ -1,0 +1,7 @@
+{
+  "siteOrigin": "https://peoples-university.github.io",
+  "allowPublishing": false,
+  "groups": [],
+  "gmail": { "sender": "", "clientId": "", "clientSecret": "" },
+  "instagram": { "handle": "peoplesuniversityproject", "loginMode": "instagram", "accountId": "", "accessToken": "", "graphVersion": "v24.0" }
+}

@@ -20,11 +20,9 @@ layout: default
 ---
 **Interested in joining the People’s University Committee? [Sign up here](https://docs.google.com/forms/d/e/1FAIpQLSdWYZgrZ6rFgCRDztLIE_i2kkWJufG4NuBu3Ljw5WWFt7I-Eg/viewform)!**
 
-![The People Under the Stairs screening poster](/website/assets/images/829356463_18098080307178668_4983033951428081298_n.jpg)
 
 
 
-**16 October 2026, 6 - 9pm, @ Rennie Hall, Emily Carr University, 520E 1st Ave**
 
 This month, we're doing a Halloween themed screening of 'The People Under the Stairs'(1991). As usual we'll be doing a lively discussion afterwards about the political themes of the film!
 

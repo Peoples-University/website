@@ -1,0 +1,13 @@
+{% include meeting-data.html entry=page %}
+<ul class="study-schedule">
+{% if meeting_date %}
+  {% if include.unit == nil or meeting_source.unit == include.unit %}
+  <li>{% if meeting_source.week %}Week {{ meeting_source.week }} · {% endif %}<time datetime="{{ meeting_date | date: '%Y-%m-%d' }}">{{ meeting_date | date: '%-d %B %Y' }}</time>{% if page.schedule_ref %} — <a href="{{ meeting_source.url | relative_url }}">{{ meeting_source.title | escape }}</a>{% endif %}{% if page.first_reading %}{{ page.first_reading | markdownify }}{% endif %}</li>
+  {% endif %}
+{% endif %}
+{% for session in page.sessions %}
+  {% if include.unit == nil or session.unit == include.unit %}
+  <li>{% if session.week %}Week {{ session.week }} · {% endif %}<time datetime="{{ session.date | date: '%Y-%m-%d' }}">{{ session.date | date: '%-d %B %Y' }}</time>{% if session.title %} — {{ session.title | remove: 'Organizer School: ' | escape }}{% endif %}{% if session.reading %}{{ session.reading | markdownify }}{% endif %}</li>
+  {% endif %}
+{% endfor %}
+</ul>

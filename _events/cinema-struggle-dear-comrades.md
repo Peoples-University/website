@@ -22,7 +22,6 @@ layout: default
 
 
 
-![](/website/assets/images/May_CS.jpg)
 
 
 

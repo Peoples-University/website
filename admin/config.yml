@@ -6,6 +6,10 @@ backend:
 
 media_folder: "assets/images"
 public_folder: "/website/assets/images"
+publish_mode: editorial_workflow
+site_url: https://peoples-university.github.io/website
+display_url: https://peoples-university.github.io/website
+logo_url: /website/assets/PUP%20Logo2.png
 
 collections:
 
@@ -38,6 +42,8 @@ collections:
     folder: "_articles"
     create: true
     slug: "{{slug}}"
+    summary: "{{title}} — {{date}}"
+    sortable_fields: [date, title]
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
@@ -68,13 +74,18 @@ collections:
     folder: "_studies"
     create: true
     slug: "{{slug}}"
+    description: "Enter meeting details here once. The page and calendar use these fields automatically."
+    summary: "{{title}} — {{event_date}}"
+    sortable_fields: [title, event_date, date]
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "First meeting date", name: "event_date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: false, hint: "Actual meeting date, not publication date. Adds this study to the calendar." }
       - { label: "Time", name: "time", widget: "string", required: false }
       - { label: "Location", name: "location", widget: "string", required: false }
-      - { label: "Start date has its own session page", name: "calendar_hide_start", widget: "boolean", default: false, required: false, hint: "Prevents duplicate calendar entries." }
+      - { label: "First meeting already has an Organizer School page", name: "schedule_ref", widget: "relation", collection: "orgschool", search_fields: [title], value_field: "{{slug}}", display_fields: [title, event_date], required: false, hint: "Optional. Reuses that page's date, time and venue, without a duplicate calendar entry." }
+      - { label: "Meeting pattern", name: "meeting_pattern", widget: "string", required: false, hint: "For example: Every two weeks. Dates still come from the confirmed meetings below." }
+      - { label: "First meeting reading", name: "first_reading", widget: "markdown", required: false }
       - label: "Additional confirmed meetings"
         name: "sessions"
         widget: "list"
@@ -82,6 +93,9 @@ collections:
         fields:
           - { label: "Meeting date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
           - { label: "Session title", name: "title", widget: "string", required: false }
+          - { label: "Unit", name: "unit", widget: "number", required: false, min: 1, value_type: "int" }
+          - { label: "Week", name: "week", widget: "number", required: false, min: 1, value_type: "int" }
+          - { label: "Reading / preparation", name: "reading", widget: "markdown", required: false }
       - { label: "Author", name: "author", widget: "string", default: "People's University Committee"}
       - { label: "Tags", name: "tags", widget: "list", required: false }
       - { label: "Image", name: "image", widget: "image", required: false }
@@ -94,29 +108,49 @@ collections:
     folder: "_orgschool26"
     create: true
     slug: "{{slug}}"
+    description: "Create a session, upload readings, and paste a normal Google Slides sharing link."
+    summary: "Week {{week}} · {{title}} · {{event_date}}"
+    sortable_fields: [week, unit, event_date, title]
+    view_groups:
+      - { label: "Unit", field: "unit" }
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Unit", name: "unit", widget: "number" }
-      - { label: "Week", name: "week", widget: "number" }
+      - { label: "Unit", name: "unit", widget: "number", min: 1, value_type: "int", default: 1 }
+      - { label: "Week", name: "week", widget: "number", min: 1, value_type: "int" }
       - { label: "Session date", name: "event_date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", hint: "Actual session date, used in the calendar and page heading." }
-      - { label: "Legacy date text", name: "datestring", widget: "string", required: false }
-      - { label: "Time", name: "time", widget: "string", hint: "Eg: 1pm - 6pm" }
-      - { label: "Slide URL", name: "slide_url", widget: "string", hint: "URL to the presentation slides" }
+      - { label: "Legacy date text", name: "datestring", widget: "hidden", required: false }
+      - { label: "Time", name: "time", widget: "string", default: "6pm - 8pm" }
+      - { label: "Google Slides link", name: "slide_url", widget: "slides-link", required: false, hint: "Paste a sharing link or published embed link. Viewers must have access; link conversion does not change sharing permissions." }
       - { label: "Author", name: "author", widget: "string", default: "People's University Committee"}
       - { label: "Tags", name: "tags", widget: "list", required: false }
       - { label: "Image", name: "image", widget: "image", required: false }
-      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Location", name: "location", widget: "string", default: "SFU Harbour Centre Room 2200" }
       - name: "books"
         label: "Reading List"
         widget: "list"
         required: false
+        collapsed: true
+        summary: "{{fields.reading_title}} · {{fields.reading_status}}"
         fields:
           - { label: "Reading Title", name: "reading_title", widget: "string" }
           - { label: "Reading Author", name: "reading_author", widget: "string" }
-          - { label: "Reading Page Count", name: "reading_pagecount", widget: "number" }
-          - { label: "Reading Link", name: "reading_link", widget: "string" }
-          - { label: "PDF Link (optional)", name: "reading_pdf", widget: "string", required: false, hint: "Direct PDF URL. Keep Reading Link for the original online text. Links ending in .pdf are detected automatically." }
+          - { label: "Required or optional?", name: "reading_status", widget: "select", options: [required, optional], default: required }
+          - { label: "Page count (if known)", name: "reading_pagecount", widget: "number", required: false, min: 1, value_type: "int" }
+          - { label: "Online reading link", name: "reading_link", widget: "string", required: false, hint: "Provide an online link, a PDF, or both." }
+          - { label: "PDF — upload or paste a link", name: "reading_pdf", widget: "file", required: false, media_folder: "/assets/readings", public_folder: "/website/assets/readings", hint: "Upload a PDF or use Insert from URL. Keep the online link if there is an alternative version.", media_library: { config: { max_file_size: 20971520 } } }
       - { label: "Summary", name: "summary", widget: "markdown" }
+      - &promotion
+        label: "Promotion readiness"
+        name: "promotion"
+        widget: "object"
+        required: false
+        collapsed: true
+        hint: "Confirm details here, save, then open Promotion studio from the editor footer. Local saves never send announcements."
+        fields:
+          - { label: "Poster, date and description confirmed", name: "confirmed", widget: "boolean", default: false }
+          - { label: "Materials ready (or not needed)", name: "materials_ready", widget: "boolean", default: false }
+          - { label: "Instagram collaborator handles", name: "collaborators", widget: "list", required: false, hint: "Collaboration invitations are completed in Instagram." }
+          - { label: "Story artwork (optional, vertical JPEG)", name: "story_image", widget: "image", required: false, hint: "Use a 9:16 design. Promotion studio can also generate a downloadable story." }
       - { label: "Layout", name: "layout", widget: "hidden", default: "os_layout" }
 
   - name: "events"
@@ -124,18 +158,28 @@ collections:
     folder: "_events"
     create: true
     slug: "{{slug}}"
+    description: "Screening defaults are filled in. The date, venue and poster are reused on the page and calendar."
+    summary: "{{event_date}} · {{title}} · {{series}}"
+    sortable_fields: [event_date, title, series]
+    view_filters:
+      - { label: "Cinema & Struggle", field: "series", pattern: "cinema" }
+      - { label: "Other events", field: "series", pattern: "other" }
+    view_groups:
+      - { label: "Series", field: "series" }
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publication / legacy date", name: "date", widget: "string", required: false, hint: "Not used for the calendar or public event date." }
+      - { label: "Publication / legacy date", name: "date", widget: "hidden", required: false }
       - { label: "Event date", name: "event_date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", hint: "Actual event date, not the date you publish the page." }
-      - { label: "Series", name: "series", widget: "select", options: [{ label: "Other event", value: "other" }, { label: "Cinema & Struggle", value: "cinema" }], default: "other" }
-      - { label: "Time", name: "time", widget: "string", hint: "Eg: 1pm - 6pm" }
-      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Series", name: "series", widget: "select", options: [{ label: "Other event", value: "other" }, { label: "Cinema & Struggle", value: "cinema" }], default: "cinema" }
+      - { label: "Time", name: "time", widget: "string", default: "6pm - 9pm", hint: "Check the time when creating a different kind of event." }
+      - { label: "Location", name: "location", widget: "string", default: "Rennie Hall, Emily Carr University, 520E 1st Ave", hint: "Screening venue default — change for other events." }
       - { label: "Calendar Link", name: "calendarlink", widget: "string", required: false }
       - { label: "Registration Link", name: "registerlink", widget: "string", required: false }
       - { label: "Author", name: "author", widget: "string", default: "People's University Committee"}
       - { label: "Tags", name: "tags", widget: "list", required: false }
-      - { label: "Image", name: "image", widget: "string" }
+      - { label: "Poster", name: "image", widget: "image", required: false, media_library: { config: { max_file_size: 8388608 } } }
+      - { label: "Poster description", name: "image_alt", widget: "string", required: false }
       - { label: "Summary", name: "summary", widget: "text" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Additional details", name: "body", widget: "markdown", required: false, hint: "No need to repeat the date, venue or poster here." }
+      - *promotion
       - { label: "Layout", name: "layout", widget: "hidden", default: "default" }

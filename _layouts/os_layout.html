@@ -23,10 +23,10 @@ layout: default
 {% if page.slide_url and page.slide_url != '' %}
 <h2 id="session-slides">Session slides</h2>
 <div class="slide-actions">
-  <a class="button button-secondary" href="{{ page.slide_url | replace: '/pubembed', '/pub' | escape }}" target="_blank" rel="noopener">Open presentation ↗</a>
+  <a class="button button-secondary" data-slides-open href="{{ page.slide_url | replace: '/pubembed', '/pub' | escape }}" target="_blank" rel="noopener">Open presentation ↗</a>
   <p class="helper-text">Open in a new tab for a larger view.</p>
 </div>
-<iframe class="embedslides" title="{{ page.title | escape }} — session slides" src="{{ page.slide_url | escape }}" loading="lazy" allowfullscreen></iframe>
+<div data-slides-url="{{ page.slide_url | escape }}" data-slides-title="{{ page.title | escape }} — session slides"><p class="helper-text">Use “Open presentation” if the slides do not appear or request access. The presentation owner controls sharing permissions.</p></div>
 {% endif %}
 
 {{ content }}

@@ -1,0 +1,8 @@
+{%- assign meeting_source = include.entry -%}
+{%- if include.entry.schedule_ref -%}
+  {%- assign linked_meeting = site.orgschool26 | where: 'slug', include.entry.schedule_ref | first -%}
+  {%- if linked_meeting -%}{%- assign meeting_source = linked_meeting -%}{%- endif -%}
+{%- endif -%}
+{%- assign meeting_date = meeting_source.event_date | default: meeting_source.datestring -%}
+{%- assign meeting_time = meeting_source.time -%}
+{%- assign meeting_location = meeting_source.location -%}

@@ -1,6 +1,7 @@
+{% include meeting-data.html entry=include.entry %}
 <li class="calendar-entry" data-event-date="{{ include.day | date: '%Y-%m-%d' }}">
   <time datetime="{{ include.day | date: '%Y-%m-%d' }}">{{ include.day | date: '%a, %-d %B %Y' }}</time>
   <a href="{{ include.entry.url | relative_url }}">{{ include.title | escape }}</a>
-  {% if include.entry.time %}<span>{{ include.entry.time | escape }}</span>{% endif %}
-  {% if include.entry.location %}<span>{{ include.entry.location | escape }}</span>{% endif %}
+  {% if meeting_time %}<span>{{ meeting_time | escape }}</span>{% endif %}
+  {% if meeting_location %}<span>{{ meeting_location | escape }}</span>{% endif %}
 </li>

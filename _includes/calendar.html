@@ -14,7 +14,7 @@
       <ul class="calendar-event-list">
         {% assign calendar_posts = site.events | concat: site.orgschool26 | concat: site.studies %}
         {% for entry in calendar_posts %}
-          {% if entry.event_date and entry.calendar_hide_start != true %}
+          {% if entry.event_date and entry.calendar_hide_start != true and entry.schedule_ref == nil %}
             {% include calendar-entry.html entry=entry day=entry.event_date title=entry.title %}
           {% endif %}
           {% for session in entry.sessions %}

@@ -6,6 +6,16 @@
   <title>People's University CMS</title>
 </head>
 <body>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <div id="cms-mode" role="status">Loading editor…</div>
+  <style>
+    #cms-mode { position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999; background: #fff1bc; color: #252a23; padding: 10px 18px; border-top: 1px solid #bea454; font: 13px/1.4 system-ui, sans-serif; }
+    #cms-mode a { color: #235e92; margin-left: 12px; }
+    #cms-mode button { margin-left: 12px; padding: 8px; }
+  </style>
+  <script>window.CMS_MANUAL_INIT = true;</script>
+  <script src="https://unpkg.com/decap-cms@3.16.3/dist/decap-cms.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <script src="../assets/js/slides-url.js"></script>
+  <script src="editor.js"></script>
 </body>
 </html>

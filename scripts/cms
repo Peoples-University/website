@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+# Local filesystem backend only. Does not commit or push.
+export BIND_HOST=127.0.0.1
+export MODE=fs
+export PORT=8081
+export ORIGIN=http://127.0.0.1:4000
+exec npx --yes decap-server@3.11.3

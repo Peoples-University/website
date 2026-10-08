@@ -14,12 +14,12 @@
 <li class="reading-resource">
   <span class="reading-file" aria-hidden="true">{% if pdf_url != '' %}PDF{% else %}TEXT{% endif %}</span>
   <div class="reading-info">
-    <span class="resource-label">{{ format_label }}{% if reading.reading_pagecount %} · {{ reading.reading_pagecount }} pages{% endif %}</span>
+    <span class="resource-label">{% if reading.reading_status == 'optional' %}Optional{% else %}Required{% endif %} · {{ format_label }}{% if reading.reading_pagecount %} · {{ reading.reading_pagecount }} pages{% endif %}</span>
     <a class="resource-link" href="{{ reading_url | escape }}">{{ reading.reading_title | escape }}</a>
     <p class="reading-author">{{ reading.reading_author | escape }}</p>
     <div class="reading-actions">
       <a class="reading-primary" href="{{ reading_url | escape }}">{% if pdf_url != '' %}Read / download PDF{% else %}Read online{% endif %}<span class="visually-hidden">: {{ reading.reading_title | escape }}</span></a>
-      {% if pdf_url != '' and pdf_url != reading.reading_link %}
+      {% if pdf_url != '' and reading.reading_link and reading.reading_link != '' and pdf_url != reading.reading_link %}
       <a href="{{ reading.reading_link | escape }}">{% if reading.reading_link contains 'docs.google.com' %}Google Docs version{% else %}Web version{% endif %}<span class="visually-hidden">: {{ reading.reading_title | escape }}</span></a>
       {% endif %}
     </div>

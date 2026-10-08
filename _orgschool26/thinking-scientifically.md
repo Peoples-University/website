@@ -8,23 +8,27 @@ time: 6pm - 8pm
 slide_url: https://docs.google.com/presentation/d/e/2PACX-1vRojCS-TonINxh0dUw4wfylBsOI-HH-ckQdMqCll6yC1BshU_-LmyKkcps-obA3BcV_yalDPrQDUrgG/pubembed?start=false&loop=false&delayms=3000
 author: People's University Committee
 image: /website/assets/images/organizerschool.png
-location: SFU Harbour Centre
+location: SFU Harbour Centre Room 2200
 books:
   - reading_title: The Definition of Science
+    reading_status: required
     reading_author: the People’s University Project
     reading_pagecount: 25
     reading_link: https://docs.google.com/document/d/1-h1akz7yrysxJw0BmwvWWNLZqZYI97tkbmYSNtKK6rA/edit?tab=t.0
     reading_pdf: https://docs.google.com/document/d/1-h1akz7yrysxJw0BmwvWWNLZqZYI97tkbmYSNtKK6rA/export?format=pdf
   - reading_title: Theses on Feuerbach
+    reading_status: required
     reading_author: Karl Marx
     reading_pagecount: 3
     reading_link: https://www.marxists.org/archive/marx/works/1845/theses/theses.htm
     reading_pdf: https://www.marxists.org/archive/marx/works/1845/theses/theses.pdf
   - reading_title: Where Do Correct Ideas Come From?
+    reading_status: required
     reading_author: Mao Zedong
     reading_pagecount: 2
     reading_link: https://www.marxists.org/reference/archive/mao/selected-works/volume-9/mswv9_01.htm
-  - reading_title: "[OPTIONAL] Activist Study (ARAK) Lesson 2"
+  - reading_title: "Activist Study (ARAK) Lesson 2"
+    reading_status: optional
     reading_author: Communist Party of Philippines
     reading_pagecount: 36
     reading_link: https://foreignlanguages.press/wp-content/uploads/2025/06/S22-Activist-Study-ARAK-11th-Printing.pdf

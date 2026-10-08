@@ -24,7 +24,6 @@ layout: default
 
 
 
-![](/website/assets/images/Jun_CS.jpg)
 
 
 
