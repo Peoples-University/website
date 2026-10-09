@@ -10,7 +10,16 @@ author: People's University Committee
 image: /website/assets/images/organizerschool.png
 layout: os_layout
 date: 2026-10-08
-summary: "In Week 2, we’ll examine how to study society scientifically. We’ll discuss post-modernism, historical materialism, and the relationship between production, social relations, and ideas. The readings and handout will help us explore the economic base and superstructure, class struggle, and scientific socialism."
+summary: >-
+  In this session, we’ll start to apply our understanding of science so that we can
+  approach the study of society (and its motion; i.e. history) scientifically.
+  We’ll develop a conception of **society as a form of matter** and an organic
+  whole. Then, we’ll look at **the basic material conditions that have had to be
+  met in order for society to exist at all**. Next, we’ll discuss why (even though
+  society is an organic whole) we need to analytically split society into two
+  parts: its **material economic base** and its **ideological superstructure**.
+  Finally, we’ll explore the relationship between these two parts throughout the
+  history of society.
 slide_url: https://docs.google.com/presentation/d/1LVkicBoXKOPa8u0NHNVZYEfgIa-Zr9vAozG4Jq4o5SM/embed?start=false&loop=false&delayms=3000
 books:
   - reading_title: "Post-Modernism Today — Chapter 2"
