@@ -17,7 +17,7 @@ books:
     reading_author: Siraj (2018)
     reading_pdf: https://drive.google.com/file/d/1EIn_pu8mLzqlsaMAOQC7tqoVhAACwXbZ/view
     reading_audio: https://drive.google.com/file/d/14yKs-eH78PO-LGsYdnnwu6HmUiF3rdqo/view
-    reading_audio_note: "The folder’s recording is labelled for the book, not specifically Chapter 2. Use the Chapter 2 PDF for the assigned selection."
+    reading_audio_note: "Book recording · Assigned reading: Chapter 2."
   - reading_title: "The Three Sources and Three Component Parts of Marxism"
     reading_author: Vladimir Lenin (1913)
     reading_pdf: https://drive.google.com/file/d/1d3CGZX9caHP2vmuXbpIDudyXKhqAuWiZ/view
@@ -39,7 +39,6 @@ books:
     reading_pdf: https://drive.google.com/file/d/1lXLusRJxkHKYvYevAMqhEA8BLWhlCPrD/view
     reading_link: https://www.marxists.org/archive/lenin/works/1894/friends/index.htm
     reading_link_label: Web version (complete work)
-    reading_audio_note: "Audio not yet available: the supplied folder does not include a recording of this excerpt."
 ---
 
 ## Session handout
@@ -48,4 +47,4 @@ Use the handout for the discussion questions and exercises on production, the ec
 
 [Read the handout](https://docs.google.com/document/d/1J9glLQMwqeDDd__wSBSfHwIjOFkyCtc2aRW3UPHoqvE/edit) · [Download handout PDF](https://docs.google.com/document/d/1J9glLQMwqeDDd__wSBSfHwIjOFkyCtc2aRW3UPHoqvE/export?format=pdf)
 
-All supplied PDFs, recordings, and slides are also in the [Week 2 materials folder](https://drive.google.com/drive/folders/1J_EzIcOj79ylpxMyxjTmiiab61OHZJle). Google Drive’s PDF viewer lets you read online or download a copy. If a file asks you to sign in, its owner needs to enable viewer access for the intended audience.
+PDFs, recordings, and slides are also in the [Week 2 materials folder](https://drive.google.com/drive/folders/1J_EzIcOj79ylpxMyxjTmiiab61OHZJle). Google Drive’s PDF viewer lets you read online or download a copy.
