@@ -22,8 +22,10 @@ layout: default
 
 {% if page.slide_url and page.slide_url != '' %}
 <h2 id="session-slides">Session slides</h2>
+{% if page.slide_note %}<p class="helper-text">{{ page.slide_note | escape }}</p>{% endif %}
 <div class="slide-actions">
-  <a class="button button-secondary" href="{{ page.slide_url | replace: '/pubembed', '/pub' | replace: '/embed', '/edit' | escape }}" target="_blank" rel="noopener">Open presentation ↗</a>
+  {% assign slide_open_url = page.slide_open_url | default: page.slide_url | replace: '/pubembed', '/pub' | replace: '/embed', '/edit' | replace: '/preview', '/view' %}
+  <a class="button button-secondary" href="{{ slide_open_url | escape }}" target="_blank" rel="noopener">Open presentation ↗</a>
   <p class="helper-text">Open in a new tab for a larger view.</p>
 </div>
 <iframe class="embedslides" title="{{ page.title | escape }} — session slides" src="{{ page.slide_url | escape }}" loading="lazy" allowfullscreen></iframe>

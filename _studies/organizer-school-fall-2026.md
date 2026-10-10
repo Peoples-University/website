@@ -5,23 +5,6 @@ event_date: "2026-10-08"
 calendar_hide_start: true
 time: 6pm - 8pm
 location: SFU Harbour Centre Room 2200
-sessions:
-  - date: "2026-10-22"
-    title: "Organizer School: The Birth of the Capitalist Mode of Production"
-  - date: "2026-10-29"
-    title: "Organizer School: The Capitalist Production & Accumulation Process"
-  - date: "2026-11-05"
-    title: "Organizer School: Imperialism and the General Crises of Capitalism"
-  - date: "2026-11-12"
-    title: "Organizer School: Do You Have Class (In Your Analysis)?"
-  - date: "2026-11-19"
-    title: "Organizer School: The Battle of the Classes"
-  - date: "2026-11-26"
-    title: "Organizer School: Movement Leadership"
-  - date: "2026-12-03"
-    title: "Organizer School: Organizing the People / Unity & Struggle"
-  - date: "2026-12-10"
-    title: "Organizer School: Raising Consciousness"
 author: People's University Committee
 image: /website/assets/images/organizerschool.png
 summary: Welcome to Organizer School 2026! Organizer school is aimed at people
@@ -56,18 +39,18 @@ Every week, we will release session pages with all the materials you will need t
 
 #### Unit 2: Science & Production
 
-***In the three weeks that follow (from week 3 to 6),*** we’ll dip our toes into political economy, the study of society’s system of production (i.e. its economy). In our brief overview, we’ll learn about the role of economic forces in the development of history, what these forces can tell us about what’s going on in the world today, and how to evaluate the material, economic interests of different social groups based on their role in the economy (i.e. the interests of different classes).
+***In the three weeks that follow (weeks 3 to 5),*** we’ll dip our toes into political economy, the study of society’s system of production (i.e. its economy). In our brief overview, we’ll learn about the role of economic forces in the development of history, what these forces can tell us about what’s going on in the world today, and how to evaluate the material, economic interests of different social groups based on their role in the economy (i.e. the interests of different classes).
 
-* Week 3 (22 Oct) - **The Birth of the Capitalist Mode of Production**
-* Week 4 (29 Oct) - **The Capitalist Production & Accumulation Process**
-* Week 5 (5 Nov) - **Imperialism and the General Crises of Capitalism**
+* Week 3 (22 Oct) - **[The Birth of the Capitalist Mode of Production]({{ '/orgschool26/the-birth-of-the-capitalist-mode-of-production.html' | relative_url }})**
+* Week 4 (29 Oct) - **[The Capitalist Production & Accumulation Process]({{ '/orgschool26/the-capitalist-production-and-accumulation-process.html' | relative_url }})**
+* Week 5 (5 Nov) - **[Imperialism and the General Crises of Capitalism]({{ '/orgschool26/imperialism-and-the-general-crises-of-capitalism.html' | relative_url }})**
 
 #### Unit 3: Science & Class Struggle
 
 ***In the five weeks that follow (weeks 6 to 10),*** we’ll review the lessons we’ve learned from the successes and failures of revolutionary mass movements, the successes and failures of class struggle. We’ll learn about strategy and tactics, organization and power, political leadership and the formation of mass demands, the importance of building unity through struggle, and how we raise the consciousness of the broad masses of people. 
 
-* Week 6 (12 Nov) - **Do You Have Class (In Your Analysis)?**
-* Week 7 (19 Nov) - **The Battle of the Classes** 
-* Week 8 (26 Nov) - **Movement Leadership** 
-* Week 9 (3 Dec) - **Organizing the People / Unity & Struggle**
-* Week 10 (10 Dec) - **Raising Consciousness**
+* Week 6 (12 Nov) - **[Do You Have Class (In Your Analysis)?]({{ '/orgschool26/do-you-have-class-in-your-analysis.html' | relative_url }})**
+* Week 7 (19 Nov) - **[The Battle of the Classes]({{ '/orgschool26/the-battle-of-the-classes.html' | relative_url }})**
+* Week 8 (26 Nov) - **[Organizing the People]({{ '/orgschool26/organizing-the-people.html' | relative_url }})**
+* Week 9 (3 Dec) - **[Movement Leadership & Unity and Struggle]({{ '/orgschool26/movement-leadership-unity-and-struggle.html' | relative_url }})**
+* Week 10 (10 Dec) - **[Raising Consciousness]({{ '/orgschool26/raising-consciousness.html' | relative_url }})**

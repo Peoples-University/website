@@ -8,7 +8,7 @@ time: 6pm - 8pm
 slide_url: https://docs.google.com/presentation/d/e/2PACX-1vRojCS-TonINxh0dUw4wfylBsOI-HH-ckQdMqCll6yC1BshU_-LmyKkcps-obA3BcV_yalDPrQDUrgG/pubembed?start=false&loop=false&delayms=3000
 author: People's University Committee
 image: /website/assets/images/organizerschool.png
-location: SFU Harbour Centre
+location: SFU Harbour Centre Room 2200
 books:
   - reading_title: The Definition of Science
     reading_author: the People’s University Project
@@ -20,14 +20,19 @@ books:
     reading_pagecount: 3
     reading_link: https://www.marxists.org/archive/marx/works/1845/theses/theses.htm
     reading_pdf: https://www.marxists.org/archive/marx/works/1845/theses/theses.pdf
+    reading_audio: https://drive.google.com/file/d/17WVdFBRec08Egv5apOU1ox5An8yZDyca/view
   - reading_title: Where Do Correct Ideas Come From?
     reading_author: Mao Zedong
     reading_pagecount: 2
     reading_link: https://www.marxists.org/reference/archive/mao/selected-works/volume-9/mswv9_01.htm
+    reading_pdf: https://drive.google.com/file/d/1tPQJHq2H-5IzTtsogUJiqej0HbAWbPES/view
+    reading_audio: https://drive.google.com/file/d/1-rt7fCX7LtRatx4qesdJ9Fv4TH4kAiFd/view
   - reading_title: "[OPTIONAL] Activist Study (ARAK) Lesson 2"
     reading_author: Communist Party of Philippines
     reading_pagecount: 36
     reading_link: https://foreignlanguages.press/wp-content/uploads/2025/06/S22-Activist-Study-ARAK-11th-Printing.pdf
+    reading_pdf: https://drive.google.com/file/d/1340w3aqrv8h2bfg6OovVBihH85vmyydN/view
+    reading_audio: https://drive.google.com/file/d/1ApsJ0oB_HAZNuE4DIfb16DDggVQHSRCS/view
 summary: "In this session, we’ll explore the meaning of science and discuss
   whether the scientific method can be meaningfully applied to the study of
   society. To do this, we’ll try to answer two questions: first, “What makes
@@ -40,3 +45,13 @@ summary: "In this session, we’ll explore the meaning of science and discuss
 layout: os_layout
 date: 21 September 2026
 ---
+
+## Session handout
+
+[Read the handout](https://docs.google.com/document/d/13DRfT8Zp5-KQEn7rIxEcDTDFIE07T2-LDsfmjwShxtg/edit) · [Download handout PDF](https://docs.google.com/document/d/13DRfT8Zp5-KQEn7rIxEcDTDFIE07T2-LDsfmjwShxtg/export?format=pdf)
+
+## Additional session material
+
+[Life of Galileo — Scene 12 (PDF)](https://drive.google.com/file/d/1MgTs8gm8AD5kQrg5C06xe702efd9YaxX/view)
+
+[Week 1 materials folder](https://drive.google.com/drive/folders/18TMW-8Cj5jMKtwIJzHsFVdHG5bxhG8p8)

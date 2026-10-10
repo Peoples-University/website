@@ -1,0 +1,9 @@
+<details class="reading-audio">
+  <summary>{{ include.label | default: 'Listen here' | escape }}<span class="visually-hidden">: {{ include.title | escape }}</span></summary>
+  {% if include.url contains 'https://drive.google.com/file/d/' %}
+    {% assign audio_id = include.url | split: '/d/' | last | split: '/' | first %}
+    <iframe src="https://drive.google.com/file/d/{{ audio_id | escape }}/preview" title="Audio: {{ include.title | escape }}{% if include.label %} — {{ include.label | escape }}{% endif %}" loading="lazy" allow="autoplay"></iframe>
+  {% else %}
+    <audio controls preload="none" src="{{ include.url | escape }}" aria-label="Audio: {{ include.title | escape }}">Your browser does not support the audio player. Use the audio link above.</audio>
+  {% endif %}
+</details>

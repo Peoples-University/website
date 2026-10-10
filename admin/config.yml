@@ -102,6 +102,8 @@ collections:
       - { label: "Legacy date text", name: "datestring", widget: "string", required: false }
       - { label: "Time", name: "time", widget: "string", hint: "Eg: 1pm - 6pm" }
       - { label: "Slide URL", name: "slide_url", widget: "string", hint: "URL to the presentation slides" }
+      - { label: "Open slides link", name: "slide_open_url", widget: "string", required: false, hint: "Optional full-size presentation link when Slide URL is a Drive preview." }
+      - { label: "Slides note", name: "slide_note", widget: "string", required: false }
       - { label: "Author", name: "author", widget: "string", default: "People's University Committee"}
       - { label: "Tags", name: "tags", widget: "list", required: false }
       - { label: "Image", name: "image", widget: "image", required: false }
@@ -118,6 +120,13 @@ collections:
           - { label: "PDF Link (optional)", name: "reading_pdf", widget: "string", required: false, hint: "Direct PDF URL. Keep Reading Link for the original online text. Links ending in .pdf are detected automatically." }
           - { label: "Web version label", name: "reading_link_label", widget: "string", required: false, hint: "Use this to indicate when the web version is a complete work rather than the assigned excerpt." }
           - { label: "Audio link", name: "reading_audio", widget: "string", required: false, hint: "Google Drive file link or direct audio file URL. Adds a listen/download link and an expandable player." }
+          - name: "reading_audios"
+            label: "Additional chapter recordings"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "Chapter label", name: "label", widget: "string" }
+              - { label: "Audio link", name: "url", widget: "string" }
           - { label: "Audio note", name: "reading_audio_note", widget: "string", required: false, hint: "Chapter, narrator, or a note about a missing recording." }
       - { label: "Summary", name: "summary", widget: "markdown" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "os_layout" }
