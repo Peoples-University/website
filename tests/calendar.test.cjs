@@ -21,7 +21,18 @@ class Element {
 }
 const html = fs.readFileSync('_site/index.html', 'utf8');
 const dates = [...html.matchAll(/class="calendar-entry" data-event-date="([^"]+)"/g)].map(match => match[1]);
-assert.equal(dates.length, 19, 'All confirmed screenings and study sessions included');
+assert.equal(dates.length, 22, 'All confirmed screenings, meetings and study sessions included');
+assert.equal(dates.filter(date => date === '2026-11-07').length, 1, 'General Membership meeting stays on November 7');
+assert.equal(dates.filter(date => date === '2026-11-08').length, 1, '9 to 5 screening moves to November 8');
+assert.equal(dates.filter(date => date === '2026-11-29').length, 1, 'Bicycle Thieves appears on November 29');
+const generalMeeting = fs.readFileSync('_site/events/general-membership-meeting.html', 'utf8');
+assert(generalMeeting.includes('datetime="2026-11-07"'));
+assert(generalMeeting.includes('2–4 PM'));
+assert(generalMeeting.includes('SFU Harbour Centre'));
+assert(generalMeeting.includes('/website/assets/images/pup-general-membership-meeting.png'));
+assert(generalMeeting.includes('mailto:peoplesuniversity@sfpirg.ca'));
+assert(generalMeeting.includes('https://www.instagram.com/peoplesuniversityproject/'));
+assert(html.includes('/website/events/general-membership-meeting.html'), 'Meeting is linked from the homepage');
 assert.equal(dates.filter(date => date === '2026-10-08').length, 1, 'Course and session must not duplicate');
 assert.equal(dates.filter(date => date === '2026-10-15').length, 1, 'Week 2 must replace its syllabus calendar placeholder');
 assert.equal(dates.filter(date => date === '2026-10-22').length, 1, 'Week 3 must replace its syllabus calendar placeholder');
@@ -76,7 +87,19 @@ for (const [file, expected] of [
 const cinema = fs.readFileSync('_site/cinema-and-struggle/index.html', 'utf8');
 assert(cinema.includes('class="cinema-theme"'));
 assert(cinema.includes('The People Under The Stairs'));
-assert.equal((cinema.match(/class="content-card/g) || []).length, 6);
+assert.equal((cinema.match(/class="content-card/g) || []).length, 8);
+for (const [slug, date, poster] of [
+  ['cinema-struggle-9-to-5', '2026-11-08', '9_to_5_moviep.jpg'],
+  ['cinema-struggle-bicycle-thieves', '2026-11-29', 'Ladri3.jpg']
+]) {
+  const screening = fs.readFileSync('_site/events/' + slug + '.html', 'utf8');
+  assert(screening.includes('datetime="' + date + '"'));
+  assert(screening.includes(poster));
+  assert(screening.includes('Screening time, venue and registration details will be announced here.'));
+  assert(!screening.includes('eventbrite.ca'), 'Do not reuse unconfirmed ticket links');
+  assert(cinema.includes('/website/events/' + slug + '.html'));
+  assert(html.includes('/website/events/' + slug + '.html'));
+}
 assert(html.includes('VPL Central Branch, Level 6 North (690) Meeting Room'));
 const school = fs.readFileSync('_site/orgschool26/thinking-scientifically.html', 'utf8');
 assert.equal((school.match(/class="resource-link"[^>]*>\[OPTIONAL\] Activist Study/g) || []).length, 1);
@@ -259,7 +282,7 @@ function testHomeDate(utcDate, expectedFirst, expectedPastFirst, expectedScreeni
 testHomeDate('2026-10-16T02:30:00Z', '2026-10-15', '2026-10-08'); // Still Oct 15 in Vancouver.
 testHomeDate('2026-10-17T15:00:00Z', '2026-10-18', '2026-10-16');
 testHomeDate('2026-12-11T15:00:00Z', undefined, '2026-12-10');
-testHomeDate('2026-05-01T15:00:00Z', '2026-05-01', undefined, 6);
+testHomeDate('2026-05-01T15:00:00Z', '2026-05-01', undefined, 8);
 const visibleUpcomingTags = [...upcomingSection.matchAll(/<article (?!hidden)[^>]*data-event-series="([^"]+)"/g)].map(match => match[1]);
 assert.equal(new Set(visibleUpcomingTags).size, visibleUpcomingTags.length, 'Build output also hides duplicate upcoming series without JavaScript');
 assert.equal(visibleUpcomingTags.filter(series => series === 'organizer-school-fall-2026').length, 1);
@@ -269,4 +292,4 @@ for (const page of [html, cinema]) {
   assert(page.includes('peoplesuniversityproject@sfpirg.ca'));
 }
 console.log('Calendar: dates, navigation, empty months, leap year, Vancouver timezone and links passed.');
-console.log('Content: event headings, Cinema membership, six screenings and latest main updates passed.');
+console.log('Content: event headings, Cinema membership, eight screenings and latest main updates passed.');
