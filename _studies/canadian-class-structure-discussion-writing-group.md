@@ -36,4 +36,4 @@ Access our session notes, writing exercises and discussion questions in [this Go
 * 18 October: Capital Vol 1, Ch 5: Contradictions in the General Formula of Capital by Karl Marx
 * 1 November: Capital Vol 1, Ch 6: The Buying and Selling of Labour-Power by Karl Marx
 
-**Note: We are using the Penguin version of Capital, translated by Ben Fowkes. You can download an [EPUB version here](https://github.com/Peoples-University/website/blob/main/assets/Capital%20-%20Karl%20Marx.epub), and a [PDF version here](https://github.com/Peoples-University/website/blob/main/assets/Capital%20-%20Karl%20Marx.pdf).**
+**Note: We are using the Penguin version of Capital, translated by Ben Fowkes. You can download an [EPUB version here](https://raw.githubusercontent.com/Peoples-University/website/main/assets/Capital%20-%20Karl%20Marx.epub), and a [PDF version here](https://raw.githubusercontent.com/Peoples-University/website/main/assets/Capital%20-%20Karl%20Marx.pdf).**
