@@ -89,13 +89,21 @@ assert(cinema.includes('class="cinema-theme"'));
 assert(cinema.includes('The People Under The Stairs'));
 assert.equal((cinema.match(/class="content-card/g) || []).length, 8);
 for (const [slug, date, poster] of [
-  ['cinema-struggle-9-to-5', '2026-11-08', '9_to_5_moviep.jpg'],
+  ['cinema-struggle-9-to-5', '2026-11-08', 'cinema-struggle-9-to-5.png'],
   ['cinema-struggle-bicycle-thieves', '2026-11-29', 'Ladri3.jpg']
 ]) {
   const screening = fs.readFileSync('_site/events/' + slug + '.html', 'utf8');
   assert(screening.includes('datetime="' + date + '"'));
   assert(screening.includes(poster));
-  assert(screening.includes('Screening time, venue and registration details will be announced here.'));
+  if (slug === 'cinema-struggle-9-to-5') {
+    assert(screening.includes('Multi-Purpose Theater, Room D1375, Emily Carr University, 520 E 1st Ave'));
+    assert(screening.includes('Doors 1 PM · Film 1:30 PM'));
+    assert(screening.includes('Admission by donation.'));
+    assert(!screening.includes('Rennie Hall'));
+    assert(!screening.includes('Screening time, venue and registration details will be announced here.'));
+  } else {
+    assert(screening.includes('Screening time, venue and registration details will be announced here.'));
+  }
   assert(!screening.includes('eventbrite.ca'), 'Do not reuse unconfirmed ticket links');
   assert(cinema.includes('/website/events/' + slug + '.html'));
   assert(html.includes('/website/events/' + slug + '.html'));
