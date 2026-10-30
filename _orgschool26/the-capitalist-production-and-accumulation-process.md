@@ -28,7 +28,7 @@ books:
 
 ## Session handouts
 
-[Session handout](https://docs.google.com/document/d/18qS5NF91u2fzFPb698WucpD9kWkDDvRUmwdu2deN_WQ/edit) · [Download PDF](https://docs.google.com/document/d/18qS5NF91u2fzFPb698WucpD9kWkDDvRUmwdu2deN_WQ/export?format=pdf)
+[Session handout](https://drive.google.com/drive/folders/18BViZELsFfLNRpAaNJTN5Aq0cj8OqmG8) · [Download PDF](https://docs.google.com/document/d/1NC3tRPKyvs_hokMDY-tW2eWPJL5arhHvWAKr4YxscHM/export?format=pdf)
 
 
 ## Materials folder
