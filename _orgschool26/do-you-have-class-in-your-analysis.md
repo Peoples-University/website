@@ -13,16 +13,18 @@ summary: "In this session, we’ll make the leap from production to class strugg
 slide_url: https://drive.google.com/file/d/1FHNWjrc16snK7VIYwnUOdon49G9LTUGM/preview
 slide_open_url: https://docs.google.com/presentation/d/1FHNWjrc16snK7VIYwnUOdon49G9LTUGM/edit
 books:
-  - reading_title: "Analysis of Classes in Chinese Society"
+  - reading_title: "A Great Beginning"
+    reading_author: "VI Lenin"
+    reading_pdf: https://www.bannedthought.net/USSR/Lenin/Lenin-AGreatBeginning-Peking-1977-OCR-sm.pdf
+    reading_link: https://www.marxists.org/archive/lenin/works/1919/jun/19.htm
+   - reading_title: "Analysis of Classes in Chinese Society"
     reading_author: "Mao Zedong"
     reading_pdf: https://drive.google.com/file/d/1D8uoXtsamSOSTdUXaEU_-aLb3tiIexnv/view
     reading_link: https://www.marxists.org/reference/archive/mao/selected-works/volume-1/mswv1_1.htm
-  - reading_title: "The Political Program of the (New) Communist Party of Canada — Sections 6 & 7"
-    reading_author: "(New) Communist Party of Canada"
-    reading_pdf: https://drive.google.com/file/d/1tPdSv5n_K2NQlH9VD4mDw8WD7LqKj4OM/view
-  - reading_title: "Aspects of the International Class Struggle in Africa, the Caribbean and America"
-    reading_author: "Walter Rodney"
-    reading_pdf: https://drive.google.com/file/d/1mJsNVu8eGGijRlqfG3fF3Tue_1q0-sEH/view
+  - reading_title: "Canadian Class Structure, Chapter 2"
+    reading_author: "Henry Veltmeyer"
+    reading_pdf: https://drive.google.com/file/d/1D8uoXtsamSOSTdUXaEU_-aLb3tiIexnv/view?usp=drive_link
+
 ---
 
 ## Session handouts
