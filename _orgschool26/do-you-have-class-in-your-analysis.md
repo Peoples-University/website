@@ -17,7 +17,7 @@ books:
     reading_author: "VI Lenin"
     reading_pdf: https://www.bannedthought.net/USSR/Lenin/Lenin-AGreatBeginning-Peking-1977-OCR-sm.pdf
     reading_link: https://www.marxists.org/archive/lenin/works/1919/jun/19.htm
-   - reading_title: "Analysis of Classes in Chinese Society"
+  - reading_title: "Analysis of Classes in Chinese Society"
     reading_author: "Mao Zedong"
     reading_pdf: https://drive.google.com/file/d/1D8uoXtsamSOSTdUXaEU_-aLb3tiIexnv/view
     reading_link: https://www.marxists.org/reference/archive/mao/selected-works/volume-1/mswv1_1.htm
