@@ -24,7 +24,7 @@ books:
   - reading_title: "Canadian Class Structure, Chapter 2"
     reading_author: "Henry Veltmeyer"
     reading_pdf: https://drive.google.com/file/d/1dk7QovasfdmrFTs4GkNWGqjY-oCAj2lU/view?usp=drive_link
-
+    reading_link: https://drive.google.com/file/d/1dk7QovasfdmrFTs4GkNWGqjY-oCAj2lU/view?usp=drive_link
 ---
 
 ## Session handouts
