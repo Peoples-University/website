@@ -7,6 +7,7 @@ location: VPL Central Branch, Level 6 North (690) Meeting Room
 sessions:
   - date: 2026-10-18
   - date: 2026-11-01
+  - date: 2026-11-15
 author: People's University Committee
 image: /website/assets/images/heading-5-.png
 summary: What is class, and who makes up the different classes in Canada? This
@@ -24,7 +25,7 @@ layout: default
 
 📆 Sundays every 2 weeks starting 4 October \
 ⏰ 11am - 1pm ([Add to calendar](https://calendar.google.com/calendar/u/2?cid=Y18zNjk5MGI1MzRmNGU2MDVhNWRkZDg2ODQ0MWUxYTA4YjQxOTU5NDgxZWEzZmJkY2Y2ZTBhNTRiNDU4MjEwNjllQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20)) \
-📍 [VPL Central Branch](https://maps.app.goo.gl/y1Ybt8VcsH3FVu2b9), Level 6 North (690) Meeting Room
+📍 [VPL Central Branch](https://maps.app.goo.gl/y1Ybt8VcsH3FVu2b9), L4 North (492) Meeting Room
 
 What is class, and who makes up the different classes in Canada? This biweekly discussion and writing group will work through that question together. Every two weeks, we’ll discuss an assigned reading, work through disagreements, ask questions, and apply what we’ve learned in a collaborative writing session. Our goal is to produce a paper on Canada’s class structure. This is an opportunity to put political-economic theory into practice and contribute to a scientific understanding of the balance of forces in our society.
 
@@ -35,5 +36,6 @@ Access our session notes, writing exercises and discussion questions in [this Go
 * 4 October: Capital Vol 1, Ch 1: Commodities by Karl Marx
 * 18 October: Capital Vol 1, Ch 5: Contradictions in the General Formula of Capital by Karl Marx
 * 1 November: Capital Vol 1, Ch 6: The Buying and Selling of Labour-Power by Karl Marx
+* 15 November: Capital Vol 1, Ch 7: The Labour-Process and the Process of Producing Surplus-Value
 
 **Note: We are using the Penguin version of Capital, translated by Ben Fowkes. You can download an [EPUB version here](https://raw.githubusercontent.com/Peoples-University/website/main/assets/Capital%20-%20Karl%20Marx.epub), and a [PDF version here](https://raw.githubusercontent.com/Peoples-University/website/main/assets/Capital%20-%20Karl%20Marx.pdf).**
