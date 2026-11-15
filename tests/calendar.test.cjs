@@ -22,9 +22,10 @@ class Element {
 const html = fs.readFileSync('_site/index.html', 'utf8');
 const dates = [...html.matchAll(/class="calendar-entry" data-event-date="([^"]+)"/g)].map(match => match[1]);
 assert.equal(dates.length, 22, 'All confirmed screenings, meetings and study sessions included');
+assert(dates.includes('2026-11-15'), 'Latest class-structure session from main is preserved');
 assert.equal(dates.filter(date => date === '2026-11-07').length, 1, 'General Membership meeting stays on November 7');
 assert.equal(dates.filter(date => date === '2026-11-08').length, 1, '9 to 5 screening moves to November 8');
-assert.equal(dates.filter(date => date === '2026-11-29').length, 1, 'Bicycle Thieves appears on November 29');
+assert(!dates.includes('2026-11-29'), 'Removed Bicycle Thieves screening is absent from the calendar');
 const generalMeeting = fs.readFileSync('_site/events/general-membership-meeting.html', 'utf8');
 assert(generalMeeting.includes('datetime="2026-11-07"'));
 assert(generalMeeting.includes('2–4 PM'));
@@ -87,10 +88,13 @@ for (const [file, expected] of [
 const cinema = fs.readFileSync('_site/cinema-and-struggle/index.html', 'utf8');
 assert(cinema.includes('class="cinema-theme"'));
 assert(cinema.includes('The People Under The Stairs'));
-assert.equal((cinema.match(/class="content-card/g) || []).length, 8);
+assert.equal((cinema.match(/class="content-card/g) || []).length, 7);
+for (const page of [html, cinema, fs.readFileSync('_site/events/index.html', 'utf8')]) {
+  assert(!page.includes('cinema-struggle-bicycle-thieves'), 'Removed screening must not appear in event listings');
+}
+assert(!fs.existsSync('_site/events/cinema-struggle-bicycle-thieves.html'), 'Removed screening page must not be generated');
 for (const [slug, date, poster] of [
-  ['cinema-struggle-9-to-5', '2026-11-08', 'cinema-struggle-9-to-5.png'],
-  ['cinema-struggle-bicycle-thieves', '2026-11-29', 'Ladri3.jpg']
+  ['cinema-struggle-9-to-5', '2026-11-08', 'cinema-struggle-9-to-5.png']
 ]) {
   const screening = fs.readFileSync('_site/events/' + slug + '.html', 'utf8');
   assert(screening.includes('datetime="' + date + '"'));
@@ -142,7 +146,7 @@ const remainingWeeks = [
       "1qs5wLGt6zidZ0VayeNvhEUMqHRKhotsx",
       "1LMXNtAs59UwtsSD0tQWnNSv5MKtF9-Zn",
       "11HFWGxLPqNvmYiY5k7Rlh4jRQ-noftM5",
-      "18qS5NF91u2fzFPb698WucpD9kWkDDvRUmwdu2deN_WQ"
+      "1NC3tRPKyvs_hokMDY-tW2eWPJL5arhHvWAKr4YxscHM"
     ]
   },
   {
@@ -168,9 +172,10 @@ const remainingWeeks = [
     "slides": "1FHNWjrc16snK7VIYwnUOdon49G9LTUGM",
     "ids": [
       "1D8uoXtsamSOSTdUXaEU_-aLb3tiIexnv",
-      "1tPdSv5n_K2NQlH9VD4mDw8WD7LqKj4OM",
-      "1mJsNVu8eGGijRlqfG3fF3Tue_1q0-sEH",
-      "1BETagQD44M1CqQFtGbqcuh2ETY1pFXNsjezKx3werE0"
+      "Lenin-AGreatBeginning-Peking-1977-OCR-sm.pdf",
+      "1dk7QovasfdmrFTs4GkNWGqjY-oCAj2lU",
+      "1NTnC9q1NkJcAAIFI-umrTEamS86x-vreKIxnLGNXbQM",
+      "1ZReZNEzxHeBYoprHSPwkhU3LpZXgv45b"
     ]
   },
   {
@@ -290,7 +295,7 @@ function testHomeDate(utcDate, expectedFirst, expectedPastFirst, expectedScreeni
 testHomeDate('2026-10-16T02:30:00Z', '2026-10-15', '2026-10-08'); // Still Oct 15 in Vancouver.
 testHomeDate('2026-10-17T15:00:00Z', '2026-10-18', '2026-10-16');
 testHomeDate('2026-12-11T15:00:00Z', undefined, '2026-12-10');
-testHomeDate('2026-05-01T15:00:00Z', '2026-05-01', undefined, 8);
+testHomeDate('2026-05-01T15:00:00Z', '2026-05-01', undefined, 7);
 const visibleUpcomingTags = [...upcomingSection.matchAll(/<article (?!hidden)[^>]*data-event-series="([^"]+)"/g)].map(match => match[1]);
 assert.equal(new Set(visibleUpcomingTags).size, visibleUpcomingTags.length, 'Build output also hides duplicate upcoming series without JavaScript');
 assert.equal(visibleUpcomingTags.filter(series => series === 'organizer-school-fall-2026').length, 1);
@@ -300,4 +305,4 @@ for (const page of [html, cinema]) {
   assert(page.includes('peoplesuniversityproject@sfpirg.ca'));
 }
 console.log('Calendar: dates, navigation, empty months, leap year, Vancouver timezone and links passed.');
-console.log('Content: event headings, Cinema membership, eight screenings and latest main updates passed.');
+console.log('Content: event headings, Cinema membership, seven screenings and latest main updates passed.');
